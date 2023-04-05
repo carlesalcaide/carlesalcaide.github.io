@@ -1,12 +1,20 @@
 # Skills
-# Organizational leadership
-- skill: Organizational leadership
-  description: I have several years of experience leading organziations from community groups to business departments. From public speaking, to mentoring, to coordination of people and events, I can lead in any context.
+# Lideratge
+- skill: Lideratge organitzatiu
+  description: Tincs diversos anys d'experiència en lideratge i coordinació de projectes. Degut a aquest fet, he adquirit diverses capacitats com des de parlar en públic, fins a la mentoria, passant per la coordinació de persones i esdeveniments, podent liderar en qualsevol context.
 
-# Communications strategy
-- skill: Communications strategy
-  description: Content and marketing strategy,
+# Xarxes socials
+#- skill: Estratègies de comunicació
+#  description: Continguts i estratègies
 
 # Digital content development and creation
-- skill: Digital content development and creation
-  description: Copy writing, graphic design, web design, front-end web development, print design
+- skill: Desenvolupament i creació de continguts digitals
+  description: Creació, disseny gràfic i d'impressió i disseny web per a diversos projectes.
+
+# 
+- skill: Computacionals
+  description: Domini de LATEX, ChemSketch, Python i eines de Microsoft Office.
+
+# 
+- skill: Idiomes
+  description: Català i castellà com a llengues maternes i el nivell B2 (certificat) d'anglès.
