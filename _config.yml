@@ -9,7 +9,7 @@ sass:
   style: compressed
 
 # Resume settings
-resume_avatar:                  "true"
+resume_avatar:                  "false" # "true"
 resume_name:                    "Carles Alcaide i Blaya"
 resume_title:                   "Currículum abreujat"
 
