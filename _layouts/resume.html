@@ -136,6 +136,24 @@
       <!-- end Skills -->
       {% endif %}
 
+      {% if site.resume_section_presentations %}
+      <!-- begin Presentations -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Presentacions i publicacions</h2>
+        </header>
+        {% for pres in site.data.presentations %}
+        <div class="resume-item">
+          <h4 class="resume-item-details">{{ pres.presentation }}</h4>
+          <p class="resume-item-copy">{{ pres.description }}</p>
+        </div>
+        {% endfor %}
+
+      </section>
+      <!-- end Skills -->
+      {% endif %}
+
       {% if site.resume_section_recognition %}
       <!-- begin Recognition -->
       <section class="content-section">
