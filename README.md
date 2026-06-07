@@ -75,7 +75,7 @@ Exploratory workflows for molecular dynamics visualization and analysis, includi
 
 ## 📚 Selected publications
 
-- **Wauer, N. A.‡; Calvó-Tusell, C.‡;** Dommer, A. C.; Casalino, L.; Kearns, F. L.; Caparotta, M.; Rosenfeld, M. A.; Morris, C. K.; Amaro, R. E.  
+- Wauer, N. A.‡; **Calvó-Tusell, C.‡;** Dommer, A. C.; Casalino, L.; Kearns, F. L.; Caparotta, M.; Rosenfeld, M. A.; Morris, C. K.; Amaro, R. E.  
   *Billion-atom simulation reveals condensate-like organization in virus-laden respiratory aerosol.*  
   **bioRxiv**, 2026. [DOI](https://doi.org/10.64898/2026.04.30.721971)
 
