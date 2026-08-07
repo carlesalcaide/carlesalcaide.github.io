@@ -7,8 +7,8 @@
 ### Computational Chemist · Excited States · Aromaticity
 
 [![Website](https://img.shields.io/badge/Website-ccalvotusell.github.io-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white)](https://carlesalcaide.github.io/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Carla%20Calvó--Tusell-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carles-alcaide-i-blaya/)
-[![GitHub](https://img.shields.io/badge/GitHub-ccalvotusell-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/carlesalcaide)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Carles%20Alcaide-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carles-alcaide-i-blaya/)
+[![GitHub](https://img.shields.io/badge/GitHub-carlesalcaide-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/carlesalcaide)
 
 </div>
 
@@ -91,7 +91,7 @@ Development of customized Bash scripts for parsing extensive Gaussian log files,
   *Bidirectional Photoswitching of a Tailored Azobenzene with Red and Far-Red Light Involving Triplet Sensitization in an Aqueous System.*
   **Adv. Sci**, 2026. [Article](https://doi.org/10.1002/advs.75155)
   
-- Naimovičius, L.; Dapkevičius, M.; Radiunas, E.; Miroshnichenko, M.; Kreiza, G.; Alcaide, C.; Baronas, P.; Sasaki, Y.; Yanai, N.; Kimizuka, N.; Pun, A. B.; Solà, M.; Bharmoria, P.; Kazlauskas, K.; Moth-Poulsen, K.  
+- Naimovičius, L.; Dapkevičius, M.; Radiunas, E.; Miroshnichenko, M.; Kreiza, G.; **Alcaide, C.**; Baronas, P.; Sasaki, Y.; Yanai, N.; Kimizuka, N.; Pun, A. B.; Solà, M.; Bharmoria, P.; Kazlauskas, K.; Moth-Poulsen, K.  
   *Enhancing the statistical probability factor in triplet–triplet annihilation photon upconversion via TIPS functionalization.*  
   **Chem. Sci.**, 2025. [Article](https://doi.org/10.1039/d5sc05248c)
 
