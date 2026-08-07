@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://carlesalcaide.github.io/assets/img/Carles_Alcaide_2_DiMoCat" width="170" style="border-radius: 50%;" alt="Carles Alcaide"/>
+<img src="https://carlesalcaide.github.io/assets/img/Carles_Alcaide_2_DiMoCat.jpg" width="170" style="border-radius: 50%;" alt="Carles Alcaide"/>
 
 # Carles Alcaide, PhD Student
 
-### Computational chemist · Excited states · Aromaticity
+### Computational Chemist · Excited States · Aromaticity
 
 [![Website](https://img.shields.io/badge/Website-ccalvotusell.github.io-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white)](https://carlesalcaide.github.io/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Carla%20Calvó--Tusell-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carles-alcaide-i-blaya/)
@@ -16,7 +16,7 @@
 
 ## 👋 About me
 
-I am a **Doctoral Researcher in Computational Chemistry** at the **Institute of Computational Chemistry and Catalysis (IQCC)** at the **Universitat de Girona**. 
+I am a **Predoctoral Researcher in Computational Chemistry** at the **Institute of Computational Chemistry and Catalysis (IQCC)** at the **Universitat de Girona**. 
 
 My research applies **quantum chemistry methods**, focusing on **excited states**, **aromaticity**, and **reaction mechanisms**. I frequently use Density Functional Theory (DFT) and Time-Dependent DFT (TD-DFT) to evaluate complex molecular systems such as Thermally Activated Delayed Fluorescence (TADF) emitters and cyclic acenes. Beyond running calculations, I actively write Bash and Python tools to automate data extraction, visualize chemical frameworks, and develop custom analytical software.
 
@@ -74,17 +74,13 @@ Development of customized Bash scripts for parsing extensive Gaussian log files,
 ## 📚 Recent & upcoming contributions
 
 - **DFT 2026**  
-  *Abstract / Presentation*: Benchmark validations and calculations on cyclic acene systems.
+  *Poster*: Benchmarking and design of BN-doped [6]helicenes for TADF applications.
 
 - **Girona Seminar 2026**  
-  *Presentation*: Insights and results stemming from my master's thesis research in computational chemistry.
+  *Presentation*: A computational quest for controlled antiaromatic reactivity of pentalene dimerization.
 
 <p align="center">
   <a href="https://carlesalcaide.github.io/#publications"><strong>See full track record →</strong></a>
-</p>
-
-<p align="center">
-  <a href="https://carlesalcaide.github.io/#publications"><strong>See full publication list →</strong></a>
 </p>
 
 ---
@@ -100,7 +96,7 @@ Development of customized Bash scripts for parsing extensive Gaussian log files,
   **Chem. Sci.**, 2025. [Article](https://doi.org/10.1039/d5sc05248c)
 
 <p align="center">
-  <a href="https://ccalvotusell.github.io/#publications"><strong>See full publication list →</strong></a>
+  <a href="https://carlesalcaide.github.io/#publications"><strong>See full publication list →</strong></a>
 </p>
 
 ---
