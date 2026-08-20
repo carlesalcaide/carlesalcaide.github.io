@@ -6,7 +6,7 @@
 
 ### Computational Chemist · Excited States · Aromaticity
 
-[![Website](https://img.shields.io/badge/Website-ccalvotusell.github.io-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white)](https://carlesalcaide.github.io/)
+[![Website](https://img.shields.io/badge/Website-carlesalcaide.github.io-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white)](https://carlesalcaide.github.io/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Carles%20Alcaide-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carles-alcaide-i-blaya/)
 [![GitHub](https://img.shields.io/badge/GitHub-carlesalcaide-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/carlesalcaide)
 
