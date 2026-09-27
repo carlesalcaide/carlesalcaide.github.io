@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ETIQUETA CLAU: Evita que Google i altres cercadors indexin la pàgina -->
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>Carles Alcaide | Composicions</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin: 2rem 0 1.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .card .meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .card p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1a252f;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Carles Alcaide</h1>
+        <p>Composicions i Arranjaments</p>
+    </header>
+
+    <main class="container">
+        
+        <h2 class="section-title">Sardanes</h2>
+        <div class="grid">
+            
+            <article class="card">
+                <h3>Aprenent de murri</h3>
+                <div class="meta">Sardana per a cobla | 2026</div>
+                <p>Presentada al Premi Mestre Conrad Saló.</p>
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary">Escoltar</a>
+                    <a href="#" class="btn btn-outline">Partitura</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Camins de ferro</h3>
+                <div class="meta">Sardana per a cobla | 2026</div>
+                <p>Dedicada al 54è Aplec de la Sardana de Flaçà.</p>
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary">Escoltar</a>
+                    <a href="#" class="btn btn-outline">Partitura</a>
+                </div>
+            </article>
+
+        </div>
+
+        <h2 class="section-title">Obra Simfònica</h2>
+        <div class="grid">
+            
+            <article class="card">
+                <h3>Girona immortal</h3>
+                <div class="meta">Obra per a banda simfònica</div>
+                <p>Composició simfònica explorant progressions harmòniques, mediants cromàtiques i intercanvi modal.</p>
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary">Escoltar</a>
+                    <a href="#" class="btn btn-outline">Partitura</a>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Carles Alcaide. Tots els drets reservats.</p>
+    </footer>
+
+</body>
+</html>
