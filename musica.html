@@ -77,6 +77,11 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-left: 4px solid var(--primary-color);
+            /* --- INICI CANVIS FLEXBOX --- */
+            display: flex;
+            flex-direction: column;
+            height: 100%; 
+            /* --- FI CANVIS FLEXBOX --- */
         }
 
         .card:hover {
@@ -105,6 +110,8 @@
         .buttons {
             display: flex;
             gap: 1rem;
+            /* --- Aquest marge empeny els botons cap a baix --- */
+            margin-top: auto; 
         }
 
         .btn {
@@ -170,13 +177,17 @@
     <main class="container">
         
         <h2 class="section-title">Sardanes</h2>
-        <div class="grid">
 
         <h3>2025</h3>
+        
+        <div class="grid">
 
             <article class="card">
                 <h3>Ressons d'història</h3>
-                <div class="meta">Sardana obligada per a cobla | 2025</div>
+                <div class="meta">
+                    Sardana obligada per a cobla | 2025 <br>
+                    Obligada de cobla
+                </div>
                 <p>Dedicada a la Cobla Bisbal Jove en motiu del seu 35è aniversari.</p>
                 <div class="buttons">
                     <a href="#" class="btn btn-primary">Escoltar</a>
@@ -188,7 +199,7 @@
             <article class="card">
                 <h3>Sardanista de cor</h3>
                 <div class="meta">Sardana per a cobla | 2025</div>
-                <p>Dedicada a en Josep Presas, un sardanista empedernit, fundador de l'Agrupació Sardanista Bella Dansa de Vidreres de part dels seus fills.</p>
+                <p>Dedicada a en Josep (Pitu) Presas, un sardanista empedernit, fundador de l'Agrupació Sardanista Bella Dansa de Vidreres de part dels seus fills.</p>
                 <div class="buttons">
                     <a href="#" class="btn btn-primary">Escoltar</a>
                     <a href="#" class="btn btn-outline">Partitura</a>
@@ -198,8 +209,10 @@
 
             <article class="card">
                 <h3>Tanins i rialles</h3>
-                <div class="meta">Sardana per a cobla | 2025</div>
-                <div class="meta">Obligada de fiscorn</div>
+                <div class="meta">
+                    Sardana obligada per a cobla | 2025 <br>
+                    Obligada de fiscorn
+                </div>
                 <p>Presentada al 1r concurs de sardanes obligades de riudellots de la Selva.3r premi (ex aequo)</p>
                 <div class="meta">3r premi (ex aequo)</div>
                 <div class="buttons">
@@ -211,8 +224,10 @@
 
             <article class="card">
                 <h3>Sota el far de Calella</h3>
-                <div class="meta">Sardana per a cobla | 2025</div>
-                <div class="meta">Finalista als premis Preludi, categoria Musical Jove</div>
+                <div class="meta">
+                    Sardana per a cobla | 2025 <br>
+                    Finalista als premis Preludi, categoria Musical Jove
+                </div>
                 <p>Dedicada a en Benet Tomàs Tió en commemoració del seu 80è aniversari.</p>
                 <div class="buttons">
                     <a href="#" class="btn btn-primary">Escoltar</a>
@@ -220,13 +235,18 @@
                     <a href="#" class="btn btn-outline">Particel·les</a>
                 </div>
             </article>
-
+        </div>
+        
         <h3>2026</h3>
+
+        <div class="grid">
             
             <article class="card">
                 <h3>Aigua, vi i graciosa</h3>
-                <div class="meta">Sardana per a cobla | 2026</div>
-                <div class="meta">Obligada de dues trompetes i trombó</div>
+                <div class="meta">
+                    Sardana obligada per a cobla | 2026 <br>
+                    Obligada de dues trompetes i trombó
+                </div>
                 <p>Dedicada al 64è Aplec de la Sardana de la Bisbal d'Empordà</p>
                 <div class="buttons">
                     <a href="#" class="btn btn-primary">Escoltar</a>
@@ -256,9 +276,11 @@
                     <a href="#" class="btn btn-outline">Particel·les</a>
                 </div>
             </article>
-
-        <h3>2027</h3>
+        </div>
             
+        <h3>2027</h3>
+
+        <div class="grid">
             <article class="card">
                 <h3>Camins de ferro</h3>
                 <div class="meta">Sardana per a cobla | 2027</div>
