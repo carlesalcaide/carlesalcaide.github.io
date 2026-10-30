@@ -1,0 +1,165 @@
+[
+  {
+    "titol": "Ressons d’història",
+    "any": 2025,
+    "tipus": "obligada",
+    "solistes": {
+      "ca": "Obligada de cobla",
+      "en": "Obligada for cobla"
+    },
+    "dedicatoria": {
+      "ca": "Dedicada a la Cobla Bisbal Jove amb motiu del seu 35è aniversari.",
+      "en": "Dedicated to the Cobla Bisbal Jove on its 35th anniversary."
+    },
+    "estat": "",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
+    "titol": "Sardanista de cor",
+    "any": 2025,
+    "tipus": "sardana",
+    "dedicatoria": {
+      "ca": "Dedicada a en Josep (Pitu) Presas, sardanista empedernit i fundador de l’Agrupació Sardanista Bella Dansa de Vidreres, de part dels seus fills.",
+      "en": ""
+    },
+    "estat": "",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
+    "titol": "Tanins i rialles",
+    "any": 2025,
+    "tipus": "obligada",
+    "solistes": {
+      "ca": "Obligada de fiscorn",
+      "en": "Solo fiscorn"
+    },
+    "dedicatoria": {
+      "ca": "Presentada al 1r Concurs de Sardanes Obligades de Riudellots de la Selva.",
+      "en": "Submitted to the 1st Sardanes Obligades Competition of Riudellots de la Selva."
+    },
+    "premi": {
+      "ca": "3r premi (ex aequo)",
+      "en": "3rd prize (shared)"
+    },
+    "estat": "",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
+    "titol": "Sota el far de Calella",
+    "any": 2025,
+    "tipus": "sardana",
+    "dedicatoria": {
+      "ca": "Dedicada a en Benet Tomàs Tió amb motiu del seu 80è aniversari.",
+      "en": "Dedicated to Benet Tomàs Tió on his 80th birthday."
+    },
+    "premi": {
+      "ca": "Finalista als Premis Preludi, categoria Musical Jove",
+      "en": "Finalist, Premis Preludi (Musical Jove category)"
+    },
+    "estat": "",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
+    "titol": "Aigua, vi i graciosa",
+    "any": 2026,
+    "tipus": "obligada",
+    "solistes": {
+      "ca": "Obligada de dues trompetes i trombó",
+      "en": "Two solo trumpets and trombone"
+    },
+    "dedicatoria": {
+      "ca": "Dedicada al 64è Aplec de la Sardana de la Bisbal d’Empordà.",
+      "en": "Dedicated to the 64th Aplec de la Sardana of la Bisbal d’Empordà."
+    },
+    "estat": "",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
+    "titol": "Nostra llavor oberta",
+    "any": 2026,
+    "tipus": "sardana",
+    "dedicatoria": {
+      "ca": "Dedicada a la memòria d’en Salvi Mateu Gironés, fundador de l’Agrupació Sardanista Bella Dansa de Vidreres, i a la seva esposa, Mercè Soler.",
+      "en": ""
+    },
+    "estat": "",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
+    "titol": "Aprenent de murri",
+    "any": 2026,
+    "tipus": "sardana",
+    "dedicatoria": {
+      "ca": "Presentada al Premi Mestre Conrad Saló.",
+      "en": "Submitted to the Premi Mestre Conrad Saló."
+    },
+    "estat": "",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
+    "titol": "Camins de ferro",
+    "any": 2027,
+    "tipus": "sardana",
+    "dedicatoria": {
+      "ca": "Dedicada al 54è Aplec de la Sardana de Flaçà.",
+      "en": "Dedicated to the 54th Aplec de la Sardana of Flaçà."
+    },
+    "estat": "properament",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
+    "titol": "Sardana de Sant Feliu de Guíxols",
+    "any": 2027,
+    "tipus": "sardana",
+    "dedicatoria": {
+      "ca": "Dedicada al 40è Aplec de la Sardana de Sant Feliu de Guíxols.",
+      "en": "Dedicated to the 40th Aplec de la Sardana of Sant Feliu de Guíxols."
+    },
+    "estat": "properament",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
+    "titol": "Sardana Xavier",
+    "any": 2027,
+    "tipus": "sardana",
+    "dedicatoria": {
+      "ca": "",
+      "en": ""
+    },
+    "estat": "properament",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
+    "titol": "Girona immortal",
+    "any": 2027,
+    "tipus": "banda",
+    "dedicatoria": {
+      "ca": "Suite simfònica de caràcter èpic que retrata la majestuositat de Girona, vertebrada a partir del desenvolupament temàtic de motius sardanistes.",
+      "en": "An epic symphonic suite portraying the grandeur of Girona, built on the thematic development of sardana motifs."
+    },
+    "estat": "properament",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  }
+]

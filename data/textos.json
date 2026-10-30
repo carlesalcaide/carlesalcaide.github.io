@@ -1,0 +1,343 @@
+{
+  "config": {
+    "correu": "carles.alcaide@udg.edu",
+    "xarxes": [
+      {
+        "nom": "LinkedIn",
+        "url": "https://www.linkedin.com/in/carles-alcaide-i-blaya/"
+      },
+      {
+        "nom": "GitHub",
+        "url": "https://github.com/carlesalcaide"
+      },
+      {
+        "nom": "X",
+        "url": "https://x.com/calcaide_26"
+      }
+    ]
+  },
+  "ca": {
+    "skip": "Salta al contingut",
+    "nav.label": "Seccions",
+    "nav.sci": "Ciència",
+    "nav.mus": "Música",
+    "nav.arx": "Arxiu",
+    "nav.contact": "Contacte",
+    "lang.label": "Idioma",
+    "home.lede": "Químic computacional i compositor.",
+    "home.sub": "Estudio els estats excitats de les molècules a l’Institut de Química Computacional i Catàlisi de la Universitat de Girona, i escric sardanes per a cobla.",
+    "home.caption": "Cinc línies: un pentagrama en compàs de 6/8 que es converteix en el diagrama d’energies d’un emissor TADF.",
+    "door.sci.d": "Estats excitats, fluorescència retardada activada tèrmicament (TADF), aromaticitat i mecanismes de reacció.",
+    "door.sci.go": "Publicacions i contribucions",
+    "door.mus.d": "Sardanes per a cobla, sardanes obligades i una obra per a banda simfònica en preparació.",
+    "door.mus.go": "Catàleg d’obres",
+    "door.arx.t": "Arxiu de partitures",
+    "door.arx.d": "Les partitures de sardanes i altres obres que conservo. Cerca per títol o per autor.",
+    "door.arx.go": "Cerca a l’arxiu",
+    "news.t": "Novetats",
+    "sci.lede": "Investigador predoctoral a l’Institut de Química Computacional i Catàlisi (IQCC) de la Universitat de Girona.",
+    "sci.toc": "En aquesta pàgina:",
+    "sci.about": "Sobre mi",
+    "sci.research": "Recerca",
+    "sci.pubs": "Publicacions",
+    "sci.contrib": "Contribucions",
+    "sci.path": "Formació",
+    "sci.photoAlt": "Retrat de Carles Alcaide i Blaya",
+    "sci.bio": [
+      "Vaig néixer el 2002. Em vaig graduar en Química a la Universitat de Girona el 2024, hi vaig fer el màster en Catàlisi Avançada i Modelització Molecular (MACMoM) el 2025 i des del febrer de 2026 hi faig el doctorat en Química.",
+      "Treballo en química teòrica i computacional: faig servir mètodes de química quàntica per entendre com l’estructura d’una molècula determina el seu comportament electrònic. He estudiat l’aromaticitat i l’antiaromaticitat, i he fet servir eines de la DFT conceptual per explicar tendències de reactivitat.",
+      "Ara em centro en la fluorescència retardada activada tèrmicament (TADF): estudio les propietats dels estats excitats i les seves aplicacions en materials orgànics funcionals. També escric eines en Bash i Python per automatitzar l’extracció de dades i visualitzar estructures químiques."
+    ],
+    "sci.lines.t": "Línies de recerca",
+    "sci.proj.t": "Projectes en curs",
+    "sci.lines": [
+      [
+        "Química quàntica i computacional",
+        "Mètodes DFT i TD-DFT per descriure l’estructura electrònica i els estats excitats de les molècules."
+      ],
+      [
+        "Emissors TADF",
+        "Mecanismes fotofísics i rendiment d’emissors amb fluorescència retardada activada tèrmicament."
+      ],
+      [
+        "Aromaticitat",
+        "Aromaticitat i antiaromaticitat des d’una perspectiva energètica i electrònica, amb eines de la DFT conceptual."
+      ],
+      [
+        "Mecanismes de reacció",
+        "Camins de reacció complexos, com dimeritzacions que passen per intermedis estables."
+      ]
+    ],
+    "sci.proj": [
+      [
+        "El programa AROMA",
+        "Programa en desenvolupament per avaluar i analitzar estructures de ressonància moleculars."
+      ],
+      [
+        "Acens cíclics",
+        "Validacions de referència a gran escala sobre les propietats electròniques i estructurals dels acens cíclics."
+      ],
+      [
+        "Dimerització del pentalè",
+        "Estudi mecanístic de la reactivitat antiaromàtica controlada en la dimerització del pentalè."
+      ],
+      [
+        "Automatització i visualització",
+        "Scripts en Bash per extreure dades de càlculs amb Gaussian i visualitzadors de ressonància en Python basats en teoria de grafs."
+      ]
+    ],
+    "pub.read": "Llegeix l’article",
+    "pub.first": "Primer autor",
+    "pub.figAlt": "Resum gràfic de l’article",
+    "pub.count": [
+      "1 article",
+      "{n} articles"
+    ],
+    "contrib.poster": "Pòster",
+    "contrib.flash": "Presentació flash",
+    "contrib.oral": "Comunicació oral",
+    "contrib.convidada": "Conferència convidada",
+    "contrib.pdf": "Descarrega el PDF",
+    "path": [
+      [
+        "2026–",
+        "Doctorat en Química",
+        "Universitat de Girona, IQCC. Des del febrer de 2026."
+      ],
+      [
+        "2025",
+        "Màster en Catàlisi Avançada i Modelització Molecular (MACMoM)",
+        "Universitat de Girona"
+      ],
+      [
+        "2024",
+        "Grau en Química",
+        "Universitat de Girona"
+      ]
+    ],
+    "mus.lede": "Escric sardanes per a cobla i obra per a banda. Gairebé totes neixen d’una dedicatòria: aplecs, cobles i persones del món sardanista de les comarques gironines.",
+    "mus.bio": "",
+    "mus.filter": "Filtra les obres",
+    "cat.all": "Totes",
+    "cat.sardanes": "Sardanes",
+    "cat.obligada": "Obligades",
+    "cat.banda": "Banda simfònica",
+    "cat.arranjament": "Arranjaments",
+    "cat.altres": "Altres obres",
+    "kind.sardana": "Sardana per a cobla",
+    "kind.obligada": "Sardana obligada per a cobla",
+    "kind.banda": "Obra per a banda simfònica",
+    "kind.arranjament": "Arranjament per a cobla",
+    "kind.altres": "Obra",
+    "w.original": "Obra original: {autor}",
+    "w.duration": "Durada: {durada}",
+    "w.listen": "Escolta",
+    "w.score": "Partitura",
+    "w.parts": "Particel·les",
+    "w.ask": "Demana partitura i particel·les",
+    "w.soon": "Properament",
+    "w.count": [
+      "Es mostra 1 obra.",
+      "Es mostren {n} obres."
+    ],
+    "w.subject": "Partitura de «{titol}»",
+    "arx.lede": "Partitures que conservo al meu arxiu personal. Si en necessites alguna per a un concert, una audició o per estudiar-la, escriu-me.",
+    "arx.search": "Cerca per títol o autor",
+    "arx.ph": "Ex.: Santa Espina, Morera…",
+    "arx.plant": "Plantilla",
+    "arx.mat": "Material",
+    "arx.anyP": "Totes",
+    "arx.anyM": "Tot",
+    "arx.col.t": "Títol",
+    "arx.col.c": "Autor",
+    "arx.col.p": "Plantilla",
+    "arx.col.m": "Material",
+    "arx.col.n": "Notes",
+    "arx.col.a": "Consulta",
+    "arx.ask": "Consulta",
+    "arx.askAria": "Pregunta per «{titol}»",
+    "arx.count": [
+      "1 partitura a l’arxiu.",
+      "{n} partitures a l’arxiu."
+    ],
+    "arx.countFiltered": "Es mostren {n} de {total} partitures.",
+    "arx.empty": "Cap partitura coincideix amb la cerca. Prova un altre títol o autor, o escriu-me per preguntar-ho.",
+    "arx.subject": "Arxiu de partitures: {titol}",
+    "own": "Obra pròpia",
+    "contact.t": "Contacte",
+    "contact.d": "Per a qüestions de recerca, per demanar una partitura o per encarregar una obra, escriu-me.",
+    "contact.where": "Universitat de Girona, Girona",
+    "contact.elsewhere": "També em trobaràs a",
+    "plantilles": {},
+    "materials": {}
+  },
+  "en": {
+    "skip": "Skip to content",
+    "nav.label": "Sections",
+    "nav.sci": "Science",
+    "nav.mus": "Music",
+    "nav.arx": "Archive",
+    "nav.contact": "Contact",
+    "lang.label": "Language",
+    "home.lede": "Computational chemist and composer.",
+    "home.sub": "I study the excited states of molecules at the Institute of Computational Chemistry and Catalysis, University of Girona, and I compose sardanes (the Catalan circle dance) for cobla.",
+    "home.caption": "Five lines: a musical staff in 6/8 that turns into the energy diagram of a TADF emitter.",
+    "door.sci.d": "Excited states, thermally activated delayed fluorescence (TADF), aromaticity and reaction mechanisms.",
+    "door.sci.go": "Publications and contributions",
+    "door.mus.d": "Sardanes for cobla, sardanes with soloists and a work for symphonic band in progress.",
+    "door.mus.go": "Catalogue of works",
+    "door.arx.t": "Score archive",
+    "door.arx.d": "The scores of sardanes and other works I keep. Search by title or composer.",
+    "door.arx.go": "Search the archive",
+    "news.t": "News",
+    "sci.lede": "Predoctoral researcher at the Institute of Computational Chemistry and Catalysis (IQCC), University of Girona.",
+    "sci.toc": "On this page:",
+    "sci.about": "About me",
+    "sci.research": "Research",
+    "sci.pubs": "Publications",
+    "sci.contrib": "Contributions",
+    "sci.path": "Education",
+    "sci.photoAlt": "Portrait of Carles Alcaide i Blaya",
+    "sci.bio": [
+      "I was born in 2002. I graduated in Chemistry from the University of Girona in 2024, completed the Master in Advanced Catalysis and Molecular Modelling (MACMoM) there in 2025, and have been a PhD student in Chemistry since February 2026.",
+      "I work in theoretical and computational chemistry, using quantum chemical methods to understand how a molecule’s structure shapes its electronic behaviour. I have studied aromaticity and antiaromaticity, and used conceptual DFT tools to explain trends in reactivity.",
+      "My current research focuses on thermally activated delayed fluorescence (TADF): excited-state properties and their applications in functional organic materials. I also write Bash and Python tools to automate data extraction and visualize chemical structures."
+    ],
+    "sci.lines.t": "Research lines",
+    "sci.proj.t": "Ongoing projects",
+    "sci.lines": [
+      [
+        "Quantum and computational chemistry",
+        "DFT and TD-DFT methods to describe the electronic structure and excited states of molecules."
+      ],
+      [
+        "TADF emitters",
+        "Photophysical mechanisms and performance of thermally activated delayed fluorescence emitters."
+      ],
+      [
+        "Aromaticity",
+        "Aromaticity and antiaromaticity from energetic and electronic perspectives, using conceptual DFT tools."
+      ],
+      [
+        "Reaction mechanisms",
+        "Complex reaction pathways, such as dimerizations that proceed through stable intermediates."
+      ]
+    ],
+    "sci.proj": [
+      [
+        "The AROMA program",
+        "A program in development to evaluate and analyse molecular resonance structures."
+      ],
+      [
+        "Cyclic acenes",
+        "Large-scale benchmark calculations on the electronic and structural properties of cyclic acenes."
+      ],
+      [
+        "Pentalene dimerization",
+        "A mechanistic study of controlled antiaromatic reactivity in pentalene dimerization."
+      ],
+      [
+        "Automation and visualization",
+        "Bash scripts to parse Gaussian output and Python resonance visualizers based on graph theory."
+      ]
+    ],
+    "pub.read": "Read the article",
+    "pub.first": "First author",
+    "pub.figAlt": "Graphical abstract of the article",
+    "pub.count": [
+      "1 article",
+      "{n} articles"
+    ],
+    "contrib.poster": "Poster",
+    "contrib.flash": "Flash talk",
+    "contrib.oral": "Oral communication",
+    "contrib.convidada": "Invited talk",
+    "contrib.pdf": "Download the PDF",
+    "path": [
+      [
+        "2026–",
+        "PhD in Chemistry",
+        "University of Girona, IQCC. Since February 2026."
+      ],
+      [
+        "2025",
+        "Master in Advanced Catalysis and Molecular Modelling (MACMoM)",
+        "University of Girona"
+      ],
+      [
+        "2024",
+        "BSc in Chemistry",
+        "University of Girona"
+      ]
+    ],
+    "mus.lede": "I write sardanes for cobla and music for band. Almost all of them start from a dedication: sardana festivals (aplecs), cobles and people from the sardana community around Girona.",
+    "mus.bio": "",
+    "mus.filter": "Filter the works",
+    "cat.all": "All",
+    "cat.sardanes": "Sardanes",
+    "cat.obligada": "With soloists",
+    "cat.banda": "Symphonic band",
+    "cat.arranjament": "Arrangements",
+    "cat.altres": "Other works",
+    "kind.sardana": "Sardana for cobla",
+    "kind.obligada": "Sardana for cobla with soloists (obligada)",
+    "kind.banda": "Work for symphonic band",
+    "kind.arranjament": "Arrangement for cobla",
+    "kind.altres": "Work",
+    "w.original": "Original work: {autor}",
+    "w.duration": "Duration: {durada}",
+    "w.listen": "Listen",
+    "w.score": "Score",
+    "w.parts": "Parts",
+    "w.ask": "Request score and parts",
+    "w.soon": "Coming soon",
+    "w.count": [
+      "Showing 1 work.",
+      "Showing {n} works."
+    ],
+    "w.subject": "Score of “{titol}”",
+    "arx.lede": "Scores I keep in my personal archive. If you need one for a concert, a performance or to study it, write to me.",
+    "arx.search": "Search by title or composer",
+    "arx.ph": "e.g. Santa Espina, Morera…",
+    "arx.plant": "Instrumentation",
+    "arx.mat": "Material",
+    "arx.anyP": "All",
+    "arx.anyM": "All",
+    "arx.col.t": "Title",
+    "arx.col.c": "Composer",
+    "arx.col.p": "Instrumentation",
+    "arx.col.m": "Material",
+    "arx.col.n": "Notes",
+    "arx.col.a": "Ask",
+    "arx.ask": "Ask",
+    "arx.askAria": "Ask about “{titol}”",
+    "arx.count": [
+      "1 score in the archive.",
+      "{n} scores in the archive."
+    ],
+    "arx.countFiltered": "Showing {n} of {total} scores.",
+    "arx.empty": "No score matches your search. Try another title or composer, or write to me and ask.",
+    "arx.subject": "Score archive: {titol}",
+    "own": "My own work",
+    "contact.t": "Contact",
+    "contact.d": "For research questions, to ask for a score or to commission a work, write to me.",
+    "contact.where": "University of Girona, Girona, Catalonia",
+    "contact.elsewhere": "You can also find me on",
+    "plantilles": {
+      "Cobla i cor": "Cobla and choir",
+      "Banda": "Band",
+      "Banda simfònica": "Symphonic band",
+      "Cor": "Choir",
+      "Orquestra": "Orchestra",
+      "Cobla i orquestra": "Cobla and orchestra"
+    },
+    "materials": {
+      "Partitura general": "Full score",
+      "Particel·les": "Parts",
+      "Còpia manuscrita": "Manuscript copy",
+      "Manuscrit": "Manuscript",
+      "Reducció per a piano": "Piano reduction",
+      "Guió": "Short score"
+    }
+  }
+}
