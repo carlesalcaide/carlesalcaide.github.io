@@ -1,6 +1,6 @@
 {
   "config": {
-    "correu": "carles.alcaide@udg.edu",
+    "correu": "carlesalcaideblaya@gmail.com",
     "xarxes": [
       {
         "nom": "LinkedIn",
@@ -100,7 +100,7 @@
     "contrib.pdf": "Descarrega el PDF",
     "path": [
       [
-        "2026–",
+        "2026–Act.",
         "Doctorat en Química",
         "Universitat de Girona, IQCC. Des del febrer de 2026."
       ],
@@ -110,12 +110,12 @@
         "Universitat de Girona"
       ],
       [
-        "2024",
+        "2020-2024",
         "Grau en Química",
         "Universitat de Girona"
       ]
     ],
-    "mus.lede": "Escric sardanes per a cobla i obra per a banda. Gairebé totes neixen d’una dedicatòria: aplecs, cobles i persones del món sardanista de les comarques gironines.",
+    "mus.lede": "Escric sardanes per a cobla. Gairebé totes neixen d’una dedicatòria: aplecs, cobles i persones del món sardanista.",
     "mus.bio": "",
     "mus.filter": "Filtra les obres",
     "cat.all": "Totes",
@@ -255,7 +255,7 @@
     "contrib.pdf": "Download the PDF",
     "path": [
       [
-        "2026–",
+        "2026–Pres.",
         "PhD in Chemistry",
         "University of Girona, IQCC. Since February 2026."
       ],
@@ -265,12 +265,12 @@
         "University of Girona"
       ],
       [
-        "2024",
+        "2020-2024",
         "BSc in Chemistry",
         "University of Girona"
       ]
     ],
-    "mus.lede": "I write sardanes for cobla and music for band. Almost all of them start from a dedication: sardana festivals (aplecs), cobles and people from the sardana community around Girona.",
+    "mus.lede": "I write sardanes for cobla. Almost all of them start from a dedication: sardana festivals (aplecs), cobles and people from the sardana community.",
     "mus.bio": "",
     "mus.filter": "Filter the works",
     "cat.all": "All",
