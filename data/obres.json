@@ -1,5 +1,19 @@
 [
   {
+    "titol": "Entre mar i muntanya",
+    "any": 2024,
+    "tipus": "sardana",
+    "dedicatoria": {
+      "ca": "Dedicada a la vila de Vidreres",
+      "en": "Dedicated to the village of Vidreres"
+    },
+    "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a Vidreres, el 24 d'agost de 2024.", "en": "Premiere by la cobla Bisbal Jove in Vidreres, on August 24, 2024."},
+    "estat": "",
+    "audio": "",
+    "partitura": "",
+    "particelles": ""
+  },
+  {
     "titol": "Ressons d’història",
     "any": 2025,
     "tipus": "obligada",
@@ -11,6 +25,7 @@
       "ca": "Dedicada a la Cobla Bisbal Jove amb motiu del seu 35è aniversari.",
       "en": "Dedicated to the Cobla Bisbal Jove on its 35th anniversary."
     },
+    "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a la Bisbal d'Empordà, el 21 de març de 2025.", "en": "Premiere by la cobla Bisbal Jove in la Bisbal d'Empordà, on March 21, 2025."},
     "estat": "",
     "audio": "",
     "partitura": "",
@@ -24,6 +39,7 @@
       "ca": "Dedicada a en Josep (Pitu) Presas, sardanista empedernit i fundador de l’Agrupació Sardanista Bella Dansa de Vidreres, de part dels seus fills.",
       "en": ""
     },
+    "estrena": {"ca": "Estrenada per la cobla Principal del Llobregat a Vidreres, el 30 d'agost de 2025.", "en": "Premiere by la cobla Principal del Llobregat in Vidreres, on August 30, 2025."},
     "estat": "",
     "audio": "",
     "partitura": "",
@@ -45,6 +61,7 @@
       "ca": "3r premi (ex aequo)",
       "en": "3rd prize (shared)"
     },
+    "estrena": {"ca": "Estrenada per la cobla la Principal de la Bisbal a Riudellots de la Selva, el 23 de novembre de 2025.", "en": "Premiere by la cobla la Principal de la Bisbal in Riudellots de la Selva, on November 23, 2025."},
     "estat": "",
     "audio": "",
     "partitura": "",
@@ -62,6 +79,7 @@
       "ca": "Finalista als Premis Preludi, categoria Musical Jove",
       "en": "Finalist, Premis Preludi (Musical Jove category)"
     },
+    "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a la Bisbal d'Empordà, el 21 de desembre de 2025.", "en": "Premiere by la cobla Bisbal Jove in la Bisbal d'Empordà, on December 21, 2025."},
     "estat": "",
     "audio": "",
     "partitura": "",
@@ -79,6 +97,7 @@
       "ca": "Dedicada al 64è Aplec de la Sardana de la Bisbal d’Empordà.",
       "en": "Dedicated to the 64th Aplec de la Sardana of la Bisbal d’Empordà."
     },
+    "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a la Bisbal d'Empordà, el 14 de juny de 2026.", "en": "Premiere by la cobla Bisbal Jove in la Bisbal d'Empordà, on June 14, 2026."},
     "estat": "",
     "audio": "",
     "partitura": "",
@@ -92,6 +111,7 @@
       "ca": "Dedicada a la memòria d’en Salvi Mateu Gironés, fundador de l’Agrupació Sardanista Bella Dansa de Vidreres, i a la seva esposa, Mercè Soler.",
       "en": ""
     },
+    "estrena": {"ca": "Estrenada per la cobla Principal del Llobregat a Vidreres, el 29 d'agost de 2026.", "en": "Premiere by la cobla Principal del Llobregat in Vidreres, on August 29, 2026."},
     "estat": "",
     "audio": "",
     "partitura": "",
@@ -105,6 +125,11 @@
       "ca": "Presentada al Premi Mestre Conrad Saló.",
       "en": "Submitted to the Premi Mestre Conrad Saló."
     },
+    "premi": {
+      "ca": "Premi popular al XIV Concurs de composició de música per a cobla Premi Mestre Conrad Saló",
+      "en": "Public Choice Award, XIV Concurs de composició de música per a cobla Premi Mestre Conrad Saló"
+    },
+    "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a la Bisbal d'Empordà, el 21 de novembre de 2026.", "en": "Premiere by la cobla Bisbal Jove in la Bisbal d'Empordà, on November 21, 2026."},
     "estat": "",
     "audio": "",
     "partitura": "",
@@ -118,6 +143,7 @@
       "ca": "Dedicada al 54è Aplec de la Sardana de Flaçà.",
       "en": "Dedicated to the 54th Aplec de la Sardana of Flaçà."
     },
+    "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a Flaçà, el 21 de març de 2027.", "en": "Premiere by la cobla Bisbal Jove in Flaçà, on March 21, 2027."},
     "estat": "properament",
     "audio": "",
     "partitura": "",
@@ -131,6 +157,7 @@
       "ca": "Dedicada al 40è Aplec de la Sardana de Sant Feliu de Guíxols.",
       "en": "Dedicated to the 40th Aplec de la Sardana of Sant Feliu de Guíxols."
     },
+    "estrena": {"ca": "Estrenada per la cobla Ciutat de Girona a Sant Feliu de Guíxols, el 23 de maig de 2027.", "en": "Premiere by la cobla Ciutat de Girona in Sant Feliu de Guíxols, on May 23, 2027."},
     "estat": "properament",
     "audio": "",
     "partitura": "",
