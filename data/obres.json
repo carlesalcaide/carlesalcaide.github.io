@@ -4,8 +4,8 @@
     "any": 2024,
     "tipus": "sardana",
     "dedicatoria": {
-      "ca": "Dedicada a la vila de Vidreres",
-      "en": "Dedicated to the village of Vidreres"
+      "ca": "Dedicada a la vila de Vidreres.",
+      "en": "Dedicated to the village of Vidreres."
     },
     "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a Vidreres, el 24 d'agost de 2024.", "en": "Premiere by la cobla Bisbal Jove in Vidreres, on August 24, 2024."},
     "estat": "",
@@ -53,13 +53,9 @@
       "ca": "Obligada de fiscorn",
       "en": "Solo fiscorn"
     },
-    "dedicatoria": {
-      "ca": "Presentada al 1r Concurs de Sardanes Obligades de Riudellots de la Selva.",
-      "en": "Submitted to the 1st Sardanes Obligades Competition of Riudellots de la Selva."
-    },
     "premi": {
-      "ca": "3r premi (ex aequo)",
-      "en": "3rd prize (shared)"
+      "ca": "3r premi (ex aequo) al 1r Concurs de Sardanes Obligades de Riudellots de la Selva.",
+      "en": "3rd prize (shared) to the 1st Sardanes Obligades Competition of Riudellots de la Selva."
     },
     "estrena": {"ca": "Estrenada per la cobla la Principal de la Bisbal a Riudellots de la Selva, el 23 de novembre de 2025.", "en": "Premiere by la cobla la Principal de la Bisbal in Riudellots de la Selva, on November 23, 2025."},
     "estat": "",
@@ -121,10 +117,6 @@
     "titol": "Aprenent de murri",
     "any": 2026,
     "tipus": "sardana",
-    "dedicatoria": {
-      "ca": "Presentada al Premi Mestre Conrad Saló.",
-      "en": "Submitted to the Premi Mestre Conrad Saló."
-    },
     "premi": {
       "ca": "Premi popular al XIV Concurs de composició de música per a cobla Premi Mestre Conrad Saló",
       "en": "Public Choice Award, XIV Concurs de composició de música per a cobla Premi Mestre Conrad Saló"
