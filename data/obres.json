@@ -10,8 +10,8 @@
     "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a Vidreres, el 24 d'agost de 2024.", "en": "Premiere by la cobla Bisbal Jove in Vidreres, on August 24, 2024."},
     "estat": "",
     "audio": "",
-    "partitura": "",
-    "particelles": ""
+    "partitura": "assets/partitures/Entre mar i muntanya - Partitura general.pdf",
+    "particelles": "assets/partitures/Entre mar i muntanya - Partitura general.pdf"
   },
   {
     "titol": "Ressons d’història",
@@ -28,8 +28,8 @@
     "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a la Bisbal d'Empordà, el 21 de març de 2025.", "en": "Premiere by la cobla Bisbal Jove in la Bisbal d'Empordà, on March 21, 2025."},
     "estat": "",
     "audio": "",
-    "partitura": "",
-    "particelles": ""
+    "partitura": "assets/partitures/Ressons d'història - Partitura general.pdf",
+    "particelles": "assets/partitures/Ressons d'història - Particel·les.pdf"
   },
   {
     "titol": "Sardanista de cor",
@@ -42,8 +42,8 @@
     "estrena": {"ca": "Estrenada per la cobla Principal del Llobregat a Vidreres, el 30 d'agost de 2025.", "en": "Premiere by la cobla Principal del Llobregat in Vidreres, on August 30, 2025."},
     "estat": "",
     "audio": "",
-    "partitura": "",
-    "particelles": ""
+    "partitura": "assets/partitures/Sardanista de cor - Partitura general.pdf",
+    "particelles": "assets/partitures/Sardanista de cor - Particel·les.pdf"
   },
   {
     "titol": "Tanins i rialles",
@@ -60,8 +60,8 @@
     "estrena": {"ca": "Estrenada per la cobla la Principal de la Bisbal a Riudellots de la Selva, el 23 de novembre de 2025.", "en": "Premiere by la cobla la Principal de la Bisbal in Riudellots de la Selva, on November 23, 2025."},
     "estat": "",
     "audio": "",
-    "partitura": "",
-    "particelles": ""
+    "partitura": "assets/partitures/Tanins i rialles - Partitura general.pdf",
+    "particelles": "assets/partitures/Tanins i rialles - Particel·les.pdf"
   },
   {
     "titol": "Sota el far de Calella",
@@ -78,8 +78,8 @@
     "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a la Bisbal d'Empordà, el 21 de desembre de 2025.", "en": "Premiere by la cobla Bisbal Jove in la Bisbal d'Empordà, on December 21, 2025."},
     "estat": "",
     "audio": "",
-    "partitura": "",
-    "particelles": ""
+    "partitura": "assets/partitures/Sota el far de Calella - Partitura general.pdf",
+    "particelles": "assets/partitures/Sota el far de Calella - Particel·les.pdf"
   },
   {
     "titol": "Aigua, vi i graciosa",
@@ -96,8 +96,8 @@
     "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a la Bisbal d'Empordà, el 14 de juny de 2026.", "en": "Premiere by la cobla Bisbal Jove in la Bisbal d'Empordà, on June 14, 2026."},
     "estat": "",
     "audio": "",
-    "partitura": "",
-    "particelles": ""
+    "partitura": "assets/partitures/Aigua, vi i graciosa - Partitura general.pdf",
+    "particelles": "assets/partitures/Aigua, vi i graciosa - Parts.pdf"
   },
   {
     "titol": "Nostra llavor oberta",
@@ -110,8 +110,8 @@
     "estrena": {"ca": "Estrenada per la cobla Principal del Llobregat a Vidreres, el 29 d'agost de 2026.", "en": "Premiere by la cobla Principal del Llobregat in Vidreres, on August 29, 2026."},
     "estat": "",
     "audio": "",
-    "partitura": "",
-    "particelles": ""
+    "partitura": "assets/partitures/Nostra llavor oberta - Partitura general.pdf",
+    "particelles": "assets/partitures/Nostra llavor oberta - Parts.pdf"
   },
   {
     "titol": "Aprenent de murri",
