@@ -1,8 +1,8 @@
 // Service worker: guarda l'app perquè funcioni sense connexió (p. ex. en un aplec).
 // Canvia VERSIO cada cop que publiquis canvis perquè els mòbils s'actualitzin.
-const VERSIO = "sardana-v3";
+const VERSIO = "sardana-v4";
 const FITXERS = ["./", "index.html", "app.js", "dades.js", "manifest.webmanifest",
-                 "icona.svg", "icona-192.png", "icona-512.png"];
+                 "icona.svg", "icona-192.png", "icona-512.png", "somsardana.svg"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(VERSIO).then((c) => c.addAll(FITXERS)).then(() => self.skipWaiting()));

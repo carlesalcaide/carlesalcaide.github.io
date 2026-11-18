@@ -1,7 +1,7 @@
 {
-  "name": "SardanaDelivery",
-  "short_name": "Sardana",
-  "description": "Repartidor de sardanes: estil empordanès i selvatà.",
+  "name": "Repartidor de sardanes",
+  "short_name": "Repartidor",
+  "description": "Repartidor de sardanes: com acabar cada tirada a l'estil empordanès, selvatà o garrotxí.",
   "lang": "ca",
   "start_url": "./",
   "scope": "./",

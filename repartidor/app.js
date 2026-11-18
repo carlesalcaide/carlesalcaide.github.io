@@ -1,4 +1,4 @@
-// SardanaDelivery (web). Tota la lògica ve precalculada a dades.js (exporta_web.py).
+// Repartidor de sardanes (web). Tota la lògica ve precalculada a dades.js (exporta_web.py).
 "use strict";
 
 const D = window.DADES;
@@ -165,7 +165,44 @@ function pagina() {
   for (const p of PAGINES) $("p-" + p).hidden = estat.pagina !== p;
 }
 
+// --- Informa d'un error ----------------------------------------------------------------------------
+const CORREU = "carlesalcaideblaya@gmail.com";
+const VERSIO_APP = "1.0";
+
+function informa() {
+  const dlg = $("informa"), form = $("form-informa");
+  $("obre-informa").onclick = () => {
+    $("inf-on").value = PAGINES.includes(estat.pagina) ? estat.pagina : "Una altra cosa";
+    dlg.showModal();
+    $("inf-que").focus();
+  };
+  $("tanca-informa").onclick = () => dlg.close();
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    const on = $("inf-on").value, que = $("inf-que").value.trim(), qui = $("inf-qui").value.trim();
+    // Dades tècniques per poder reproduir l'error
+    const context = estat.abast === SARDANA
+      ? `${estat.curts} curts, ${estat.llargs} llargs, ${resum()}`
+      : `${estat.n} compassos, ${resum()}`;
+    const cos = [
+      que, "",
+      qui ? `Correu de contacte: ${qui}` : "",
+      "---",
+      `On: ${on}`,
+      `Dades: ${context}`,
+      `Versió: ${VERSIO_APP}`,
+      `Navegador: ${navigator.userAgent}`,
+    ].filter((l, i) => l !== "" || i === 1).join("\n");
+    const assumpte = `Repartidor de sardanes: error a ${on}`;
+    location.href = `mailto:${CORREU}?subject=${encodeURIComponent(assumpte)}&body=${encodeURIComponent(cos)}`;
+    form.reset();
+    dlg.close();
+  };
+}
+
 // --- Inici ---------------------------------------------------------------------------------------
+$("any").textContent = Math.max(2026, new Date().getFullYear());
+informa();
 camp(document.querySelector('[data-camp="curts"]'), "curts");
 camp(document.querySelector('[data-camp="llargs"]'), "llargs");
 camp(document.querySelector('[data-camp="n"]'), "n");
