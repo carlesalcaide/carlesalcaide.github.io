@@ -145,6 +145,7 @@ a{color:inherit}
 .view-head h1::before{content:"";display:block;width:56px;height:4px;background:var(--accent);margin-bottom:24px;border-radius:2px}
 .view-head .lede{font-size:clamp(1.15rem,2vw,1.3rem);line-height:1.5;max-width:52ch;margin:0}
 [data-view="musica"] .view-head,[data-view="arxiu"] .view-head{border-bottom:0}
+.view-head .tool{margin:20px 0 0}
 .view-head .lede + .lede{margin-top:12px;color:var(--muted);font-size:1.0625rem}
 h1:focus,h2:focus{outline:none}
 .toc{display:flex;flex-wrap:wrap;gap:0 4px;margin-top:22px;align-items:center}
