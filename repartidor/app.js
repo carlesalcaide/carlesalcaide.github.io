@@ -73,9 +73,9 @@ function actualitza() {
       files.insertAdjacentHTML("beforeend",
         `<span class="punt ${c}"></span><span class="nom">${nom}</span><span class="final ${c}">${finals ? finals[i] : "—"}</span>`);
     });
-    if (!ok) files.insertAdjacentHTML("beforeend", `<span></span><span class="error" style="grid-column:span 2">Mínim ${D.minim} compassos</span>`);
+    if (!ok) files.insertAdjacentHTML("beforeend", `<span class="error nota">Mínim ${D.minim} compassos</span>`);
     if (estat.estil === "Garrotxí") files.insertAdjacentHTML("beforeend",
-      `<span class="nom" style="grid-column:1/-1;white-space:normal;margin-top:6px">Garrotxí: experimental, pendent de comprovar per un expert. Els curts es reparteixen com a l'empordanès.</span>`);
+      `<span class="nom nota">Garrotxí: experimental, pendent de comprovar per un expert. Els curts es reparteixen com a l'empordanès.</span>`);
   } else {
     const ok = estat.n >= D.minim;
     $("una-etiqueta").textContent = `Final de la tirada de ${estat.tipus.toLowerCase()}`;

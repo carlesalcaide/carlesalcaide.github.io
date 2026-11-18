@@ -5,119 +5,163 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>SardanaDelivery</title>
   <meta name="description" content="Repartidor de sardanes: estil empordanès i selvatà.">
-  <meta name="theme-color" content="#0B1120">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="color-scheme" content="light">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Sardana">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icona.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icona-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;700;800;900&display=swap">
   <style>
+    /* Estètica inspirada en SomSardana: blanc, gris clar, magenta i els colors de suport. */
     :root {
-      --bg: #0B1120; --surface: #151E31; --surface-2: #1E293B; --border: #2A3650;
-      --amber: #F59E0B; --cyan: #38BDF8; --text: #F1F5F9; --muted: #8090A8; --error: #F87171;
-      --ok-bg: #14532D; --ok: #86EFAC; --ko-bg: #7F1D1D; --ko: #FCA5A5;
-      --radi: 18px;
+      --bg: #F4F4F4; --surface: #FFFFFF; --surface-2: #F4F4F4; --border: #E4E4E4;
+      --magenta: #E5005B; --magenta-fosc: #C2004D; --groc: #FAB600; --verd: #8FBF21; --taronja: #EC6408;
+      --text: #242424; --muted: #676767; --error: #C2004D;
+      --curts: #D35400; --llargs: #E5005B;
+      --ok-bg: #EEF6DC; --ok: #4B6B06; --ko-bg: #FDE5EF; --ko: #B0003F;
+      --ombra: 0 1px 2px rgba(0,0,0,.04), 0 6px 20px rgba(0,0,0,.06);
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; background: var(--bg); color: var(--text); }
     body {
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+      font-family: "Sofia Sans", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+      font-size: 17px;
       -webkit-font-smoothing: antialiased;
-      padding: max(18px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+      padding: 0 0 max(28px, env(safe-area-inset-bottom));
     }
-    main { max-width: 480px; margin: 0 auto; }
-    h1 { color: var(--amber); font-size: 1.7rem; margin: 0; letter-spacing: -0.01em; }
-    .sub { color: var(--muted); margin: 2px 0 16px; font-size: 0.9rem; }
-    .seccio { color: var(--muted); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
-              text-transform: uppercase; margin: 14px 0 6px; }
-    .caixa { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 16px 18px; }
-    .caixa + .caixa, details + .caixa { margin-top: 14px; }
+    button, input { font-family: inherit; }
+    button:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 3px solid rgba(229,0,91,.35); outline-offset: 2px;
+    }
 
-    /* Selector en pastilla */
-    .seg { display: flex; gap: 4px; background: var(--surface-2); border-radius: 999px; padding: 4px; }
-    .seg button {
-      flex: 1; border: 0; background: transparent; color: var(--muted); font: inherit; font-weight: 700;
-      font-size: 0.85rem; padding: 9px 4px; border-radius: 999px; cursor: pointer;
+    /* Capçalera blanca, com la del web */
+    .capcalera {
+      background: var(--surface); box-shadow: 0 1px 0 var(--border);
+      padding: max(16px, env(safe-area-inset-top)) 16px 14px;
     }
-    .seg button.actiu { background: var(--amber); color: var(--bg); }
-    .seg.pagines { margin-bottom: 16px; }
-    .seg.pagines button.actiu { background: var(--border); color: var(--text); }
+    .capcalera > div { max-width: 480px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+    .punts { display: grid; grid-template-columns: repeat(2, 9px); gap: 4px; flex: none; }
+    .punts i { width: 9px; height: 9px; border-radius: 50%; }
+    .punts i:nth-child(1) { background: var(--magenta); } .punts i:nth-child(2) { background: var(--groc); }
+    .punts i:nth-child(3) { background: var(--groc); }    .punts i:nth-child(4) { background: var(--magenta); }
+    h1 { font-size: 1.6rem; font-weight: 800; margin: 0; letter-spacing: -0.01em; line-height: 1.1; }
+    .sub { color: var(--muted); margin: 2px 0 0; font-size: 0.95rem; }
+
+    main { max-width: 480px; margin: 0 auto; padding: 18px 16px 0; }
+    .seccio { color: var(--text); font-size: 0.9rem; font-weight: 700; margin: 16px 0 7px; }
+    .caixa { background: var(--surface); border-radius: 16px; padding: 18px; box-shadow: var(--ombra); }
+    .caixa + .caixa, details + .caixa { margin-top: 16px; }
+    .titol-caixa { font-size: 1.25rem; font-weight: 800; margin: 0 0 4px; }
+
+    /* Selectors en pastilla */
+    .seg { display: flex; gap: 4px; background: var(--surface-2); border-radius: 9999px; padding: 4px; }
+    .seg button {
+      flex: 1; border: 0; background: transparent; color: var(--muted); font-weight: 700;
+      font-size: 0.92rem; padding: 10px 4px; border-radius: 9999px; cursor: pointer; transition: background .15s, color .15s;
+    }
+    .seg button:hover { color: var(--text); }
+    .seg button.actiu { background: var(--magenta); color: #fff; }
+    .seg.pagines { background: var(--surface); box-shadow: var(--ombra); margin-bottom: 18px; }
+    .seg.pagines button { font-size: 1rem; }
+    .seg.pagines button.actiu { background: var(--text); color: #fff; }
 
     /* Entrades */
     .entrades { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .entrades.una { grid-template-columns: 1fr; }
-    .entrada label { display: block; color: var(--muted); font-size: 0.8rem; margin-bottom: 5px; }
-    .camp { display: flex; align-items: center; background: var(--surface-2); border-radius: 16px;
-            border: 1px solid var(--surface-2); }
-    .camp:focus-within { border-color: var(--amber); }
+    .entrada label { display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+    .camp { display: flex; align-items: center; background: var(--surface); border-radius: 12px;
+            border: 1px solid #CCCCCC; }
+    .camp:focus-within { border-color: var(--magenta); box-shadow: 0 0 0 3px rgba(229,0,91,.15); }
     .camp input {
       flex: 1; min-width: 0; width: 100%; background: transparent; border: 0; color: var(--text);
-      font: inherit; font-size: 1.7rem; font-weight: 800; text-align: center; padding: 10px 0; outline: none;
+      font-size: 1.8rem; font-weight: 800; text-align: center; padding: 8px 0; outline: none;
+      -moz-appearance: textfield;
     }
-    .camp button { background: none; border: 0; color: var(--muted); font-size: 1.4rem; font-weight: 700;
-                   width: 44px; height: 52px; cursor: pointer; }
-    .camp button:active { color: var(--amber); }
+    .camp input::-webkit-outer-spin-button, .camp input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .camp button { background: none; border: 0; color: var(--magenta); font-size: 1.5rem; font-weight: 700;
+                   width: 46px; height: 54px; cursor: pointer; }
+    .camp button:active { color: var(--magenta-fosc); }
 
     /* Desplegable */
-    details { margin-top: 14px; }
+    details { margin-top: 16px; }
     summary {
       list-style: none; display: flex; align-items: center; gap: 8px; cursor: pointer;
-      background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 13px 16px;
-      font-weight: 700; font-size: 0.9rem;
+      background: var(--surface); border-radius: 12px; padding: 14px 16px; box-shadow: var(--ombra);
+      font-weight: 700; font-size: 1rem;
     }
     summary::-webkit-details-marker { display: none; }
-    summary .resum { margin-left: auto; color: var(--muted); font-weight: 500; font-size: 0.78rem; text-align: right; }
-    summary .fletxa { color: var(--amber); transition: transform .15s; }
+    summary .resum { margin-left: auto; color: var(--muted); font-weight: 500; font-size: 0.85rem; text-align: right; }
+    summary .fletxa { color: var(--magenta); transition: transform .15s; }
     details[open] summary .fletxa { transform: rotate(180deg); }
     details .caixa { margin-top: 8px; }
     details .caixa > .seccio:first-child { margin-top: 0; }
 
     /* Resultats */
-    .files { display: grid; grid-template-columns: auto auto 1fr; align-items: center; column-gap: 10px; row-gap: 7px; }
-    .punt { width: 8px; height: 8px; border-radius: 50%; }
-    .nom { color: var(--muted); font-size: 0.82rem; white-space: nowrap; }
-    .final { font-weight: 800; font-size: clamp(0.85rem, 4.2vw, 1.12rem); overflow-wrap: anywhere; }
-    .curts { color: var(--cyan); } .curts.punt { background: var(--cyan); }
-    .llargs { color: var(--amber); } .llargs.punt { background: var(--amber); }
-    .una-tirada { text-align: center; padding: 26px 18px; }
-    .una-tirada .etiqueta { color: var(--muted); font-size: 0.9rem; }
-    .una-tirada .final { font-size: clamp(1.2rem, 7vw, 1.9rem); margin-top: 6px; }
+    .files { display: grid; grid-template-columns: auto auto 1fr; align-items: center; column-gap: 0; row-gap: 0; }
+    .files > .nom { padding-left: 10px; padding-right: 14px; }
+    .files > * { padding: 9px 0; border-bottom: 1px solid #EFEFEF; }
+    .files > :nth-last-child(-n+3) { border-bottom: 0; }
+    .files > .punt { padding: 0; width: 10px; height: 10px; border-bottom: 0; }
+    .punt { width: 10px; height: 10px; border-radius: 50%; }
+    .nom { color: var(--muted); font-size: 0.95rem; white-space: nowrap; }
+    .final { font-weight: 800; font-size: clamp(0.95rem, 4.4vw, 1.2rem); overflow-wrap: anywhere; }
+    .curts { color: var(--curts); } .curts.punt { background: var(--taronja); }
+    .llargs { color: var(--llargs); } .llargs.punt { background: var(--magenta); }
+    .nota { grid-column: 1 / -1; white-space: normal !important; font-size: 0.88rem !important; border-bottom: 0 !important; }
+    .una-tirada { text-align: center; padding: 28px 18px; }
+    .una-tirada .etiqueta { color: var(--muted); font-size: 1rem; }
+    .una-tirada .final { font-size: clamp(1.4rem, 7.5vw, 2.1rem); font-weight: 900; margin-top: 6px; }
     .error { color: var(--error); font-weight: 700; }
 
     /* Normes */
-    .normes h2 { color: var(--amber); font-size: 0.72rem; letter-spacing: 0.06em; margin: 18px 0 6px; }
+    .normes h2 { color: var(--magenta); font-size: 1.1rem; font-weight: 800; margin: 22px 0 6px; }
     .normes h2:first-child { margin-top: 0; }
-    .normes p { margin: 0 0 10px; line-height: 1.5; font-size: 0.93rem; }
+    .normes p { margin: 0 0 10px; line-height: 1.55; font-size: 1rem; }
 
     /* Pràctica */
-    .pregunta { font-weight: 700; line-height: 1.4; margin: 6px 0 12px; }
+    .etiqueta-caixa { color: var(--magenta); font-size: 1.15rem; font-weight: 800; margin: 0; }
+    .pregunta { font-weight: 700; font-size: 1.05rem; line-height: 1.4; margin: 8px 0 12px; }
     .opcio {
-      display: block; width: 100%; text-align: left; border: 0; border-radius: 14px; padding: 12px 14px;
-      margin: 6px 0; background: var(--surface-2); color: var(--text); font: inherit; font-weight: 700; cursor: pointer;
+      display: block; width: 100%; text-align: left; border: 1px solid var(--border); border-radius: 12px; padding: 13px 15px;
+      margin: 8px 0; background: var(--surface); color: var(--text); font-size: 1rem; font-weight: 700; cursor: pointer;
     }
-    .opcio.ok { background: var(--ok-bg); color: var(--ok); }
-    .opcio.ko { background: var(--ko-bg); color: var(--ko); }
-    .explicacio { color: var(--muted); line-height: 1.45; font-size: 0.9rem; margin-top: 10px; }
-    .peu-ex { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; }
-    .peu-ex span { color: var(--muted); font-size: 0.8rem; }
-    .enllac { background: none; border: 0; color: var(--amber); font: inherit; font-weight: 700; cursor: pointer; }
-    .fila-cmp { display: flex; gap: 8px; margin-top: 8px; align-items: center; }
+    .opcio:hover { border-color: var(--magenta); }
+    .opcio.ok { background: var(--ok-bg); border-color: var(--verd); color: var(--ok); }
+    .opcio.ko { background: var(--ko-bg); border-color: var(--magenta); color: var(--ko); }
+    .explicacio { color: var(--muted); line-height: 1.5; font-size: 0.97rem; margin-top: 10px; }
+    .peu-ex { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; }
+    .peu-ex span { color: var(--muted); font-size: 0.92rem; }
+    .enllac { background: var(--magenta); border: 0; color: #fff; font-size: 1rem; font-weight: 700; cursor: pointer;
+              border-radius: 12px; padding: 11px 20px; }
+    .enllac:hover { background: var(--magenta-fosc); }
+    .fila-cmp { display: flex; gap: 8px; margin-top: 10px; align-items: center; }
     .fila-cmp input {
-      width: 76px; background: var(--surface-2); border: 1px solid var(--surface-2); border-radius: 14px; color: var(--text);
-      font: inherit; font-weight: 800; font-size: 1.2rem; text-align: center; padding: 9px 0; outline: none;
+      width: 76px; background: var(--surface); border: 1px solid #CCCCCC; border-radius: 12px; color: var(--text);
+      font-weight: 800; font-size: 1.3rem; text-align: center; padding: 9px 0; outline: none;
     }
-    .fila-cmp input:focus { border-color: var(--amber); }
+    .fila-cmp input:focus { border-color: var(--magenta); box-shadow: 0 0 0 3px rgba(229,0,91,.15); }
     .fila-cmp .seg { flex: 1; min-width: 0; }
-    .fila-cmp .seg button { font-size: 0.75rem; white-space: nowrap; padding: 9px 2px; }
-    .ok-text { color: var(--ok); } .ko-text { color: var(--ko); }
+    .fila-cmp .seg button { font-size: 0.8rem; white-space: nowrap; padding: 10px 2px; }
+    .ok-text { color: var(--ok); font-weight: 700; } .ko-text { color: var(--ko); font-weight: 700; }
     [hidden] { display: none !important; }
   </style>
 </head>
 <body>
+<header class="capcalera">
+  <div>
+    <span class="punts" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <div>
+      <h1>SardanaDelivery</h1>
+      <p class="sub">Repartidor de sardanes</p>
+    </div>
+  </div>
+</header>
 <main>
-  <h1>SardanaDelivery</h1>
-  <p class="sub">Repartidor de sardanes</p>
   <div class="seg pagines" id="pagines"></div>
 
   <!-- Repartidor -->
@@ -159,17 +203,17 @@
   <!-- Pràctica -->
   <section id="p-Pràctica" hidden>
     <div class="caixa">
-      <div class="seccio" style="margin-top:0;color:var(--amber)">Exercici</div>
+      <h2 class="etiqueta-caixa">Exercici</h2>
       <div class="pregunta" id="ex-pregunta"></div>
       <div id="ex-opcions"></div>
       <div class="explicacio" id="ex-explicacio"></div>
       <div class="peu-ex"><span id="ex-punts"></span><button class="enllac" id="ex-seguent">Següent ›</button></div>
     </div>
     <div class="caixa">
-      <div class="seccio" style="margin-top:0;color:var(--amber)">M'he descomptat?</div>
-      <div class="explicacio" style="margin-top:0">Digues el número que comptes i on ets del pas. L'app et diu si encaixa (no serveix per a la 2a tirada doblada).</div>
-      <div class="seg" id="cmp-tipus" style="margin-top:10px"></div>
-      <div class="fila-cmp"><input id="cmp-n" type="number" inputmode="numeric" min="1" value="40"><div class="seg" id="cmp-moment"></div></div>
+      <h2 class="etiqueta-caixa">M'he descomptat?</h2>
+      <div class="explicacio" style="margin-top:6px">Digues el número que comptes i on ets del pas. L'app et diu si encaixa (no serveix per a la 2a tirada doblada).</div>
+      <div class="seg" id="cmp-tipus" style="margin-top:12px"></div>
+      <div class="fila-cmp"><input id="cmp-n" type="number" inputmode="numeric" min="1" value="40" aria-label="Número que comptes"><div class="seg" id="cmp-moment"></div></div>
       <div class="explicacio" id="cmp-res"></div>
     </div>
   </section>
