@@ -186,6 +186,7 @@
     "titol": "Girona immortal",
     "any": 2027,
     "tipus": "banda",
+    "tipus_text": {"ca": "Obra lliure", "en": "Free-form work"},
     "dedicatoria": {
       "ca": "Suite simfònica de caràcter èpic que retrata la majestuositat de Girona, vertebrada a partir del desenvolupament temàtic de motius sardanistes.",
       "en": "An epic symphonic suite portraying the grandeur of Girona, built on the thematic development of sardana motifs."
