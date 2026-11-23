@@ -221,6 +221,14 @@ h1:focus,h2:focus{outline:none}
 .ded{margin:10px 0 0;max-width:60ch}
 .award{display:inline-flex;align-items:center;gap:7px;font:600 .875rem/1.4 var(--sans);color:var(--mus);background:var(--mus-soft);padding:6px 12px;border-radius:16px}
 .awards{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.press{margin-top:14px;font:400 .9375rem/1.5 var(--sans)}
+.press-label{margin:0 0 2px;font-weight:600;color:var(--muted)}
+.press ul{list-style:none;margin:0;padding:0}
+.press li{margin:2px 0}
+.press a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--mus);text-underline-offset:4px}
+.press a:hover{text-decoration-thickness:2px}
+.press-src{color:var(--muted)}
+.news .txt a{text-decoration-color:var(--c);text-underline-offset:4px;font-family:var(--sans);font-size:.9375rem;font-weight:600;color:var(--c);white-space:nowrap}
 .soon{display:inline-block;font:600 .8125rem/1 var(--sans);color:var(--muted);border:1px dashed var(--rule-strong);border-radius:999px;padding:7px 12px}
 .actions{display:flex;flex-wrap:wrap;gap:8px;align-content:start;justify-content:flex-end;max-width:300px}
 .work.example h3{color:var(--muted)}
