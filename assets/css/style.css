@@ -131,13 +131,13 @@ a{color:inherit}
 .news{margin:clamp(56px,8vw,96px) 0 clamp(64px,9vw,112px)}
 .news h2{font-size:1.5rem;font-weight:500;margin:0 0 10px}
 .news ol{list-style:none;margin:0;padding:0}
-.news li{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:4px 24px;padding:16px 0;border-top:1px solid var(--rule);align-items:baseline}
-.news .yr{font:500 .9375rem/1.5 var(--sans);color:var(--muted)}
+.news li{display:grid;grid-template-columns:128px minmax(0,1fr) auto;gap:4px 24px;padding:16px 0;border-top:1px solid var(--rule);align-items:baseline}
+.news .yr{font:500 .9375rem/1.5 var(--sans);color:var(--muted);white-space:nowrap}
 .news .txt{margin:0;font-size:1.0625rem;line-height:1.5}
 .news .sec{font:600 .875rem/1.4 var(--sans);color:var(--c);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;justify-self:end}
 .news [data-sec="ciencia"]{--c:var(--sci)}
 .news [data-sec="musica"]{--c:var(--mus)}
-@media (max-width:640px){.news li{grid-template-columns:52px minmax(0,1fr)}.news .sec{grid-column:2;justify-self:start}}
+@media (max-width:640px){.news li{grid-template-columns:minmax(0,1fr);gap:2px}.news .sec{justify-self:start;margin-top:4px}}
 
 /* Capçalera de secció */
 .view-head{padding:clamp(40px,7vw,72px) 0 28px;border-bottom:1px solid var(--rule)}
@@ -219,7 +219,8 @@ h1:focus,h2:focus{outline:none}
 .kind{font:500 .9375rem/1.5 var(--sans);color:var(--muted);margin:6px 0 0}
 .kind b{font-weight:600;color:var(--ink)}
 .ded{margin:10px 0 0;max-width:60ch}
-.award{display:inline-flex;align-items:center;gap:7px;font:600 .875rem/1.4 var(--sans);color:var(--mus);background:var(--mus-soft);padding:6px 12px;border-radius:999px;margin-top:12px}
+.award{display:inline-flex;align-items:center;gap:7px;font:600 .875rem/1.4 var(--sans);color:var(--mus);background:var(--mus-soft);padding:6px 12px;border-radius:16px}
+.awards{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .soon{display:inline-block;font:600 .8125rem/1 var(--sans);color:var(--muted);border:1px dashed var(--rule-strong);border-radius:999px;padding:7px 12px}
 .actions{display:flex;flex-wrap:wrap;gap:8px;align-content:start;justify-content:flex-end;max-width:300px}
 .work.example h3{color:var(--muted)}
