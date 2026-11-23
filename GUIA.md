@@ -143,6 +143,7 @@ Cada obra és un bloc entre claus `{ }`, separat del següent per una coma. L'or
 | `dedicatoria` | no | Dedicatòria o descripció breu. Si deixes buit l'anglès, es mostra el català. |
 | `premis` | no | Llista de premis o reconeixements. Cada premi surt en una etiqueta pròpia, destacada en color. Vegeu l'exemple de sota. |
 | `original` | no | Per als arranjaments: l'autor de l'obra original. Surt com «Obra original: …». |
+| `premsa` | no | Notícies o crítiques sobre l'obra. Surten sota els premis, a l'apartat «A la premsa». Vegeu l'exemple de sota. |
 | `durada` | no | Text lliure, per exemple `"4 min 30 s"`. |
 | `estrena` | no | Text lliure sobre l'estrena: data, lloc i intèrprets. |
 | `estat` | no | `"properament"` per a les obres no acabades o per estrenar: surt l'etiqueta «Properament» i no surten botons. Buit (`""`) per a la resta. |
@@ -168,6 +169,25 @@ Posa cada premi com un element de la llista `premis`, separats per una coma:
 Cada premi surt en una etiqueta independent. Si només n'hi ha un, la llista té un sol element. Si encara no n'hi ha cap, pots esborrar el camp `premis`.
 
 El camp antic `premi`, per a un sol premi, continua funcionant, però és millor fer servir sempre `premis`.
+
+### Una notícia sobre una obra
+
+Quan un mitjà parli d'una obra teva, afegeix-la a la llista `premsa` de l'obra:
+
+```json
+"premsa": [
+  {
+    "titol": "Carles Alcaide conquesta el Premi Mestre Conrad Saló",
+    "mitja": "SomSardana",
+    "data": "2026-11-23",
+    "url": "https://somsardana.cat/…"
+  }
+],
+```
+
+La `data` admet els mateixos formats que les novetats (apartat 6). Si n'hi ha més d'una, separa-les amb una coma, com els premis.
+
+Enllaça la notícia, però no en copiïs el text ni les fotos al teu web: són del mitjà i del fotògraf. Per si algun dia l'enllaç deixa de funcionar, desa'n una còpia a l'Internet Archive. Ves a `https://web.archive.org/save`, enganxa-hi l'adreça i prem *Save page*.
 
 ### Afegir un arranjament
 
@@ -288,6 +308,7 @@ Els valors de `tipus` amb traducció són `poster`, `flash`, `oral` i `convidada
   El format recomanat és any-mes-dia, però també s'accepta `"09/05/2027"` (dia/mes/any). Les novetats s'ordenen soles de la més recent a la més antiga. Si dues novetats són del mateix any, la que té data completa surt abans que la que només té l'any.
 - `seccio` pot ser `ciencia` o `musica`. Decideix el color i l'enllaç de la novetat.
 - Pots fer servir `<em>…</em>` per posar títols en cursiva.
+- Per afegir un enllaç al final d'una novetat, escriu-lo així: `<a href=\"https://…\" target=\"_blank\" rel=\"noopener\">Llegeix la notícia</a>`. Dins del JSON, les cometes de l'enllaç van amb una barra al davant (`\"`).
 - Recomanació: tingues-ne entre tres i cinc, i esborra les més antigues.
 
 
