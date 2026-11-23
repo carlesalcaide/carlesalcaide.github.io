@@ -117,10 +117,12 @@
     "titol": "Aprenent de murri",
     "any": 2026,
     "tipus": "sardana",
-    "premi": {
-      "ca": "Premi del Jurat i Premi Popular al XIV Concurs de composició de música per a cobla Premi Mestre Conrad Saló",
-      "en": "Jury Award and Public Choice Award, XIV Concurs de composició de música per a cobla Premi Mestre Conrad Saló"
-    },
+    "premi": [{
+      "ca": "Premi del Jurat al XIV Concurs de composició de música per a cobla Premi Mestre Conrad Saló",
+      "en": "Jury Award, XIV Concurs de composició de música per a cobla Premi Mestre Conrad Saló",
+      "ca": "Premi Popular al XIV Concurs de composició de música per a cobla Premi Mestre Conrad Saló",
+      "en": "Public Choice Award, XIV Concurs de composició de música per a cobla Premi Mestre Conrad Saló"
+    }],
     "estrena": {"ca": "Estrenada per la cobla Bisbal Jove a la Bisbal d'Empordà, el 21 de novembre de 2026.", "en": "Premiere by la cobla Bisbal Jove in la Bisbal d'Empordà, on November 21, 2026."},
     "estat": "",
     "audio": "",
