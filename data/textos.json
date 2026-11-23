@@ -139,7 +139,7 @@
     "w.score": "Partitura",
     "w.parts": "Particel·les",
     "w.ask": "Demana partitura i particel·les",
-    "w.soon": "Properament",
+    "w.soon": "Properament", "w.press": "A la premsa",
     "w.count": [
       "Es mostra 1 obra.",
       "Es mostren {n} obres."
@@ -298,7 +298,7 @@
     "w.score": "Score",
     "w.parts": "Parts",
     "w.ask": "Request score and parts",
-    "w.soon": "Coming soon",
+    "w.soon": "Coming soon", "w.press": "In the press",
     "w.count": [
       "Showing 1 work.",
       "Showing {n} works."
