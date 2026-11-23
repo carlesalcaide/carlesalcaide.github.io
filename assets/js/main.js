@@ -101,12 +101,42 @@ function parseCSV(text) {
 }
 
 /* ---------- Render ---------- */
+/* Dates de les novetats: "2026", "2026-03" o "2026-03-15" (també accepta 15/03/2026) */
+var MONTHS = {
+  ca: { short: ["gen.", "febr.", "març", "abr.", "maig", "juny", "jul.", "ag.", "set.", "oct.", "nov.", "des."],
+        long: ["gener", "febrer", "març", "abril", "maig", "juny", "juliol", "agost", "setembre", "octubre", "novembre", "desembre"] },
+  en: { short: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        long: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] }
+};
+function pad2(x) { return (x < 10 ? "0" : "") + x; }
+function parseDate(raw) {
+  raw = String(raw == null ? "" : raw).trim();
+  var y, mo = 0, d = 0, m;
+  if ((m = raw.match(/^(\d{4})(?:-(\d{1,2}))?(?:-(\d{1,2}))?$/))) { y = +m[1]; mo = m[2] ? +m[2] : 0; d = m[3] ? +m[3] : 0; }
+  else if ((m = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/))) { d = +m[1]; mo = +m[2]; y = +m[3]; }
+  else return { key: raw, iso: "", ok: false, raw: raw };
+  if (mo > 12 || d > 31 || (d && !mo)) return { key: raw, iso: "", ok: false, raw: raw };
+  return { y: y, mo: mo, d: d, ok: true,
+           key: y + "-" + pad2(mo) + "-" + pad2(d),
+           iso: y + (mo ? "-" + pad2(mo) : "") + (d ? "-" + pad2(d) : "") };
+}
+function formatDate(p) {
+  if (!p.ok) return p.raw;
+  var L = MONTHS[lang] || MONTHS.ca;
+  if (p.d) return p.d + " " + L.short[p.mo - 1] + " " + p.y;
+  if (p.mo) return L.long[p.mo - 1] + " " + p.y;
+  return String(p.y);
+}
+
 function renderNews() {
-  var items = D.novetats.slice().sort(function (a, b) { return (b.any || 0) - (a.any || 0); });
-  $("#news-list").innerHTML = items.map(function (n) {
+  var items = D.novetats.map(function (n) { return { n: n, date: parseDate(n.data != null ? n.data : n.any) }; });
+  items.sort(function (a, b) { return a.date.key < b.date.key ? 1 : a.date.key > b.date.key ? -1 : 0; });
+  $("#news-list").innerHTML = items.map(function (it) {
+    var n = it.n;
     var sec = n.seccio === "musica" ? "musica" : "ciencia";
     var secName = sec === "ciencia" ? t("nav.sci") : t("nav.mus");
-    return '<li data-sec="' + sec + '"><span class="yr">' + esc(n.any) + '</span><p class="txt">' + (n[lang] || n.ca || "") +
+    var when = it.date.iso ? '<time class="yr" datetime="' + it.date.iso + '">' + esc(formatDate(it.date)) + '</time>' : '<span class="yr">' + esc(formatDate(it.date)) + '</span>';
+    return '<li data-sec="' + sec + '">' + when + '<p class="txt">' + (n[lang] || n.ca || "") +
       '</p><a class="sec" href="#' + sec + '">' + esc(secName) + '</a></li>';
   }).join("");
   $(".news").hidden = items.length === 0;
@@ -189,6 +219,8 @@ function renderWorks() {
       if (w.durada) meta.push(esc(t("w.duration", { durada: w.durada })));
       if (w.estrena && loc(w.estrena)) meta.push(esc(loc(w.estrena)));
       var ded = loc(w.dedicatoria);
+      // "premis" (llista) o "premi" (un sol premi o una llista)
+      var prizes = [].concat(w.premis || [], w.premi || []).map(loc).filter(Boolean);
 
       var actions = "";
       if (w.estat === "properament") actions = '<span class="soon">' + esc(t("w.soon")) + '</span>';
@@ -203,7 +235,7 @@ function renderWorks() {
         '<p class="kind">' + kind + '</p>' +
         meta.map(function (m) { return '<p class="meta-line">' + m + '</p>'; }).join("") +
         (ded ? '<p class="ded" lang="' + locLang(w.dedicatoria) + '">' + esc(ded) + '</p>' : "") +
-        (w.premi && loc(w.premi) ? '<span class="award">' + AWARD_ICON + esc(loc(w.premi)) + '</span>' : "") +
+        (prizes.length ? '<div class="awards">' + prizes.map(function (pr) { return '<span class="award">' + AWARD_ICON + esc(pr) + '</span>'; }).join("") + '</div>' : "") +
         '</div><div class="actions">' + actions + '</div></article>';
     }).join("");
     return '<section class="ygroup" aria-label="' + esc(y) + '"><div class="ylabel">' + esc(y) + '</div><div>' + items + '</div></section>';
