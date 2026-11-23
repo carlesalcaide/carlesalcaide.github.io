@@ -221,6 +221,8 @@ function renderWorks() {
       var ded = loc(w.dedicatoria);
       // "premis" (llista) o "premi" (un sol premi o una llista)
       var prizes = [].concat(w.premis || [], w.premi || []).map(loc).filter(Boolean);
+      // "premsa": notícies sobre l'obra (titol, mitja, data, url)
+      var press = (w.premsa || []).filter(function (n) { return isUrl(n.url); });
 
       var actions = "";
       if (w.estat === "properament") actions = '<span class="soon">' + esc(t("w.soon")) + '</span>';
@@ -236,6 +238,11 @@ function renderWorks() {
         meta.map(function (m) { return '<p class="meta-line">' + m + '</p>'; }).join("") +
         (ded ? '<p class="ded" lang="' + locLang(w.dedicatoria) + '">' + esc(ded) + '</p>' : "") +
         (prizes.length ? '<div class="awards">' + prizes.map(function (pr) { return '<span class="award">' + AWARD_ICON + esc(pr) + '</span>'; }).join("") + '</div>' : "") +
+        (press.length ? '<div class="press"><p class="press-label">' + esc(t("w.press")) + '</p><ul>' + press.map(function (n) {
+          var d = n.data ? parseDate(n.data) : null;
+          var src = [n.mitja, d && d.ok ? formatDate(d) : ""].filter(Boolean).join(", ");
+          return '<li><a href="' + esc(href(n.url)) + '" target="_blank" rel="noopener" lang="ca">' + esc(n.titol || n.mitja || n.url) + '</a>' + (src ? ' <span class="press-src">' + esc(src) + '</span>' : "") + '</li>';
+        }).join("") + '</ul></div>' : "") +
         '</div><div class="actions">' + actions + '</div></article>';
     }).join("");
     return '<section class="ygroup" aria-label="' + esc(y) + '"><div class="ylabel">' + esc(y) + '</div><div>' + items + '</div></section>';
