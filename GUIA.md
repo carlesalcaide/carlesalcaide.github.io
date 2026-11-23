@@ -119,7 +119,9 @@ Cada obra és un bloc entre claus `{ }`, separat del següent per una coma. L'or
   "tipus": "obligada",
   "solistes": {"ca": "Obligada de fiscorn", "en": "Solo fiscorn"},
   "dedicatoria": {"ca": "Presentada al 1r Concurs de Sardanes Obligades de Riudellots de la Selva.", "en": ""},
-  "premi": {"ca": "3r premi (ex aequo)", "en": "3rd prize (shared)"},
+  "premis": [
+    {"ca": "3r premi (ex aequo)", "en": "3rd prize (shared)"}
+  ],
   "durada": "5 min",
   "estrena": {"ca": "Estrenada per la Cobla […] a […], el […]", "en": ""},
   "estat": "",
@@ -139,7 +141,7 @@ Cada obra és un bloc entre claus `{ }`, separat del següent per una coma. L'or
 | `tipus_text` | no | Per canviar el text del tipus quan el que surt per defecte no encaixa. Per exemple: `{"ca": "Sardana per a cobla i cor", "en": "Sardana for cobla and choir"}`. |
 | `solistes` | no | Per a les obligades: `{"ca": "Obligada de tenora", "en": "Solo tenora"}`. |
 | `dedicatoria` | no | Dedicatòria o descripció breu. Si deixes buit l'anglès, es mostra el català. |
-| `premi` | no | Premis o reconeixements. Surt destacat en color. |
+| `premis` | no | Llista de premis o reconeixements. Cada premi surt en una etiqueta pròpia, destacada en color. Vegeu l'exemple de sota. |
 | `original` | no | Per als arranjaments: l'autor de l'obra original. Surt com «Obra original: …». |
 | `durada` | no | Text lliure, per exemple `"4 min 30 s"`. |
 | `estrena` | no | Text lliure sobre l'estrena: data, lloc i intèrprets. |
@@ -151,6 +153,21 @@ Cada obra és un bloc entre claus `{ }`, separat del següent per una coma. L'or
 Si una obra no té ni `partitura` ni `particelles`, surt automàticament el botó «Demana partitura i particel·les». Aquest botó obre un correu adreçat a tu amb el títol de l'obra ja escrit.
 
 Els filtres de la secció Música només apareixen si hi ha obres d'aquell tipus. Per exemple, el filtre «Arranjaments» sortirà quan n'afegeixis el primer.
+
+### Una obra amb més d'un premi
+
+Posa cada premi com un element de la llista `premis`, separats per una coma:
+
+```json
+"premis": [
+  {"ca": "1r premi al Concurs […]", "en": "1st prize, […] Competition"},
+  {"ca": "Premi del públic al Concurs […]", "en": "Audience award, […] Competition"}
+],
+```
+
+Cada premi surt en una etiqueta independent. Si només n'hi ha un, la llista té un sol element. Si encara no n'hi ha cap, pots esborrar el camp `premis`.
+
+El camp antic `premi`, per a un sol premi, continua funcionant, però és millor fer servir sempre `premis`.
 
 ### Afegir un arranjament
 
@@ -253,13 +270,22 @@ Els valors de `tipus` amb traducció són `poster`, `flash`, `oral` i `convidada
 
 ```json
 {
-  "any": 2027,
+  "data": "2027-05-09",
   "seccio": "musica",
   "ca": "Estrena de <em>Camins de ferro</em> al 54è Aplec de la Sardana de Flaçà.",
   "en": "Premiere of <em>Camins de ferro</em> at the 54th Aplec de la Sardana of Flaçà."
 }
 ```
 
+- **`data`** és la data de la novetat, sempre entre cometes. Hi pots posar tres graus de precisió:
+
+  | Si escrius | Surt en català | Surt en anglès |
+  |---|---|---|
+  | `"2027-05-09"` | 9 maig 2027 | 9 May 2027 |
+  | `"2027-05"` | maig 2027 | May 2027 |
+  | `"2027"` | 2027 | 2027 |
+
+  El format recomanat és any-mes-dia, però també s'accepta `"09/05/2027"` (dia/mes/any). Les novetats s'ordenen soles de la més recent a la més antiga. Si dues novetats són del mateix any, la que té data completa surt abans que la que només té l'any.
 - `seccio` pot ser `ciencia` o `musica`. Decideix el color i l'enllaç de la novetat.
 - Pots fer servir `<em>…</em>` per posar títols en cursiva.
 - Recomanació: tingues-ne entre tres i cinc, i esborra les més antigues.
@@ -328,7 +354,7 @@ Si hi ha un error, et dirà la línia i la columna.
 - [ ] Omplir `mus.bio` amb la teva formació musical (apartat 7).
 - [ ] Revisar el material de les teves obres a `arxiu.csv` i afegir-hi la resta de partitures de l'arxiu.
 - [ ] Afegir enllaços d'àudio i partitures a `obres.json` quan els tinguis.
+- [ ] Posar la data completa a les novetats que encara només tenen l'any (`novetats.json`).
 - [ ] Comprovar el volum de l'article d'*Adv. Sci.*: ara diu «2026, 12», però el volum 12 correspon al 2025.
 - [ ] Actualitzar els enllaços `#publications` del `README.md`.
 - [ ] Afegir l'ORCID i el teu perfil de Google Scholar a les xarxes (apartat 7).
-- [ ] Decidir si les consultes de partitures han d'arribar al correu de la UdG o a un correu personal (camp `correu` de `textos.json`).
