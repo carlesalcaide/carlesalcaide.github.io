@@ -118,6 +118,13 @@
     .una-tirada .final { font-size: clamp(1.4rem, 7.5vw, 2.1rem); font-weight: 900; margin-top: 6px; }
     .error { color: var(--error); font-weight: 700; }
 
+    /* Salt */
+    #in-salt { margin-top: 14px; }
+    .opcional { color: var(--muted); font-weight: 500; }
+    .ajuda-salt { color: var(--muted); font-size: 0.85rem; line-height: 1.4; margin: 6px 2px 0; }
+    .salt-text { display: block; color: var(--muted); font-size: 0.85rem; font-weight: 600; margin-top: 2px; }
+    .una-tirada .salt-text { font-size: 0.95rem; margin-top: 8px; }
+
     /* Normes */
     .normes h2 { color: var(--magenta); font-size: 1.1rem; font-weight: 800; margin: 22px 0 6px; }
     .normes h2:first-child { margin-top: 0; }
@@ -205,6 +212,13 @@
     <div class="entrades una" id="in-tirada" hidden>
       <div class="entrada"><label for="n">Compassos</label><div class="camp" data-camp="n"></div></div>
     </div>
+    <div class="entrades una" id="in-salt">
+      <div class="entrada">
+        <label for="salt">Salt <span class="opcional">(opcional)</span></label>
+        <div class="camp" data-camp="salt"></div>
+        <p class="ajuda-salt">El compàs on comença el fort d'abaix. Als programes és el número de després de la barra (33 - 77 / <b>56</b>). Si el poses, et diem a quin número cau el canvi útil comptant des del salt.</p>
+      </div>
+    </div>
 
     <details id="opcions">
       <summary>Més opcions <span class="resum" id="resum"></span><span class="fletxa">▾</span></summary>
@@ -226,6 +240,7 @@
     <div class="caixa una-tirada" id="res-tirada" hidden>
       <div class="etiqueta" id="una-etiqueta"></div>
       <div class="final" id="una-final"></div>
+      <div class="salt-text" id="una-salt" hidden></div>
     </div>
   </section>
 

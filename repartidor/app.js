@@ -8,7 +8,7 @@ const PAGINES = ["Repartidor", "Normes", "Pràctica"];
 
 const estat = {
   pagina: "Repartidor", abast: SARDANA, mida: String(D.midaPerDefecte), estil: D.estils[0],
-  mode: D.modes[0], tipus: "Llargs", peu: D.peus[0], curts: 31, llargs: 85, n: 85,
+  mode: D.modes[0], tipus: "Llargs", peu: D.peus[0], curts: 31, llargs: 85, n: 85, salt: 0,
   cmpTipus: "Llargs", cmpMoment: "1r peu",
 };
 
@@ -30,18 +30,32 @@ function segmentat(el, opcions, clau, onChange) {
   }
 }
 
-function camp(el, clau) {
+function camp(el, clau, opcional = false) {
   el.innerHTML = `<button type="button" aria-label="menys">−</button>
-    <input id="${clau}" type="number" inputmode="numeric" min="0" value="${estat[clau]}">
+    <input id="${clau}" type="number" inputmode="numeric" min="0" value="${opcional && !estat[clau] ? "" : estat[clau]}"${opcional ? ' placeholder="—"' : ""}>
     <button type="button" aria-label="més">+</button>`;
   const [menys, input, mes] = el.children;
-  const posa = (v) => { estat[clau] = Math.max(0, v); input.value = estat[clau]; desa(); actualitza(); };
+  const posa = (v) => {
+    estat[clau] = Math.max(0, v);
+    input.value = opcional && !estat[clau] ? "" : estat[clau];
+    desa(); actualitza();
+  };
   menys.onclick = () => posa((parseInt(input.value) || 0) - 1);
   mes.onclick = () => posa((parseInt(input.value) || 0) + 1);
   input.oninput = () => { estat[clau] = parseInt(input.value) || 0; desa(); actualitza(); };
 }
 
 const classeTipus = (nom) => (nom.includes("urts") ? "curts" : "llargs");
+
+// --- Salt: mateixa regla que des_del_salt() / text_salt() de repartiment.py ---------
+function textSalt(llargs, salt, falten, dob = 1) {
+  if (!(salt >= 1 && salt <= llargs)) return null;
+  const canvi = dob * llargs - falten, s = (dob - 1) * llargs + salt, compte = canvi - s + 1;
+  // A les tirades doblades el compte és des del segon salt, però el text és el mateix.
+  return compte < 1 ? `El canvi útil (compàs ${canvi}) arriba abans del salt`
+                    : `Des del salt: canvi útil al ${compte}`;
+}
+const errorSalt = (llargs, salt) => (salt && !(salt >= 1 && salt <= llargs) ? "El salt ha de ser dins dels llargs" : null);
 
 // --- Repartidor --------------------------------------------------------------------
 function resum() {
@@ -60,6 +74,7 @@ function actualitza() {
   $("in-sardana").hidden = $("op-sardana").hidden = $("res-sardana").hidden = !sardana;
   $("in-tirada").hidden = $("op-tirada").hidden = $("res-tirada").hidden = sardana;
   $("op-peu").hidden = estat.tipus !== "Llargs";
+  $("in-salt").hidden = !sardana && estat.tipus !== "Llargs";
   $("resum").textContent = resum();
 
   if (sardana) {
@@ -67,13 +82,19 @@ function actualitza() {
     files.innerHTML = "";
     const noms = D.noms[estat.mida];
     const ok = estat.curts >= D.minim && estat.llargs >= D.minim;
-    const finals = ok ? D.sardana[[estat.estil, estat.mode, estat.mida, estat.curts % 4, estat.llargs % 8].join("|")] : null;
+    const clau = [estat.estil, estat.mode, estat.mida, estat.curts % 4, estat.llargs % 8].join("|");
+    const finals = ok ? D.sardana[clau] : null;
+    const falten = ok && estat.salt ? D.falten[clau] : null;
+    const errSalt = errorSalt(estat.llargs, estat.salt);
     noms.forEach((nom, i) => {
-      const c = classeTipus(nom);
+      const c = classeTipus(nom), fd = falten && falten[i];
+      const salt = fd && c === "llargs" && !errSalt ? textSalt(estat.llargs, estat.salt, fd[0], fd[1]) : null;
       files.insertAdjacentHTML("beforeend",
-        `<span class="punt ${c}"></span><span class="nom">${nom}</span><span class="final ${c}">${finals ? finals[i] : "—"}</span>`);
+        `<span class="punt ${c}"></span><span class="nom">${nom}</span><span class="final ${c}">${finals ? finals[i] : "—"}` +
+        (salt ? `<small class="salt-text">${salt}</small>` : "") + `</span>`);
     });
     if (!ok) files.insertAdjacentHTML("beforeend", `<span class="error nota">Mínim ${D.minim} compassos</span>`);
+    else if (errSalt) files.insertAdjacentHTML("beforeend", `<span class="error nota">${errSalt}</span>`);
     if (estat.estil === "Garrotxí") files.insertAdjacentHTML("beforeend",
       `<span class="nom nota">Garrotxí: experimental, pendent de comprovar per un expert. Els curts es reparteixen com a l'empordanès.</span>`);
   } else {
@@ -82,6 +103,14 @@ function actualitza() {
     const f = $("una-final");
     f.textContent = ok ? D.tirada[[estat.tipus, estat.peu, estat.n % 8].join("|")] : `Mínim ${D.minim} compassos`;
     f.className = "final " + (ok ? classeTipus(estat.tipus) : "error");
+    const us = $("una-salt");
+    const errSalt = errorSalt(estat.n, estat.salt);
+    const salt = ok && estat.tipus === "Llargs" && estat.salt
+      ? (errSalt || textSalt(estat.n, estat.salt, D.faltenTirada[["Llargs", estat.peu, estat.n % 8].join("|")]))
+      : null;
+    us.hidden = !salt;
+    us.textContent = salt || "";
+    us.className = "salt-text" + (errSalt ? " error" : "");
   }
 }
 
@@ -182,7 +211,7 @@ function informa() {
     const on = $("inf-on").value, que = $("inf-que").value.trim(), qui = $("inf-qui").value.trim();
     // Dades tècniques per poder reproduir l'error
     const context = estat.abast === SARDANA
-      ? `${estat.curts} curts, ${estat.llargs} llargs, ${resum()}`
+      ? `${estat.curts} curts, ${estat.llargs} llargs${estat.salt ? `, salt ${estat.salt}` : ""}, ${resum()}`
       : `${estat.n} compassos, ${resum()}`;
     const cos = [
       que, "",
@@ -206,6 +235,7 @@ informa();
 camp(document.querySelector('[data-camp="curts"]'), "curts");
 camp(document.querySelector('[data-camp="llargs"]'), "llargs");
 camp(document.querySelector('[data-camp="n"]'), "n");
+camp(document.querySelector('[data-camp="salt"]'), "salt", true);
 $("ex-seguent").onclick = nouExercici;
 $("cmp-n").oninput = comprova;
 normes();
