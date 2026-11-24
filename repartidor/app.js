@@ -50,8 +50,8 @@ function textCanvi(n, falten, dob = 1, salt = 0, llargs = true) {
   // A les tirades doblades el salt és el de la segona vegada
   const compte = ambSalt ? canvi - ((dob - 1) * n + salt) + 1 : 0;
   if (ambSalt && compte >= 1) return `Al ${compte} després del salt`;
-  let text = `Al compàs ${canvi}`;
-  if (dob === 2 && canvi > n) text += ` (el ${canvi - n} de la 2a)`;
+  // A les tirades lligades, el compàs es compta només dins de la segona tirada
+  let text = `Al compàs ${dob === 2 && canvi > n ? canvi - n : canvi}`;
   if (ambSalt) text += ", abans del salt";
   return text;
 }
