@@ -102,11 +102,13 @@
     details .caixa > .seccio:first-child { margin-top: 0; }
 
     /* Resultats */
-    .files { display: grid; grid-template-columns: auto auto 1fr; align-items: center; column-gap: 0; row-gap: 0; }
+    /* Les cel·les ocupen tota l'alçada de la fila (així les ratlles queden alineades) i el nom
+       i el punt s'alineen amb la primera línia del final, encara que en tingui una a sota. */
+    .files { display: grid; grid-template-columns: auto auto 1fr; align-items: stretch; column-gap: 0; row-gap: 0; }
     .files > .nom { padding-left: 10px; padding-right: 14px; }
-    .files > * { padding: 9px 0; border-bottom: 1px solid #EFEFEF; }
+    .files > * { padding: 9px 0; border-bottom: 1px solid #EFEFEF; line-height: 1.25; }
     .files > :nth-last-child(-n+3) { border-bottom: 0; }
-    .files > .punt { padding: 0; width: 10px; height: 10px; border-bottom: 0; }
+    .files > .punt { padding: 0; width: 10px; height: 10px; border-bottom: 0; align-self: start; margin-top: 14px; }
     .punt { width: 10px; height: 10px; border-radius: 50%; }
     .nom { color: var(--muted); font-size: 0.95rem; white-space: nowrap; }
     .final { font-weight: 800; font-size: clamp(0.95rem, 4.4vw, 1.2rem); overflow-wrap: anywhere; }

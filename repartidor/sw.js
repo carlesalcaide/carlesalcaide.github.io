@@ -1,6 +1,6 @@
 // Service worker: guarda l'app perquè funcioni sense connexió (p. ex. en un aplec).
 // Canvia VERSIO cada cop que publiquis canvis perquè els mòbils s'actualitzin.
-const VERSIO = "sardana-v7";
+const VERSIO = "sardana-v8";
 const FITXERS = ["./", "index.html", "app.js", "dades.js", "manifest.webmanifest",
                  "icona.svg", "icona-192.png", "icona-512.png", "somsardana.svg"];
 
