@@ -119,10 +119,17 @@
     .error { color: var(--error); font-weight: 700; }
 
     /* Salt */
-    #in-salt { margin-top: 14px; }
     .opcional { color: var(--muted); font-weight: 500; }
-    .ajuda-salt { color: var(--muted); font-size: 0.85rem; line-height: 1.4; margin: 6px 2px 0; }
-    .salt-text { display: block; color: var(--muted); font-size: 0.85rem; font-weight: 600; margin-top: 2px; }
+    .fila-salt { display: flex; gap: 12px; align-items: center; }
+    .fila-salt input {
+      flex: none; width: 76px; background: var(--surface); border: 1px solid #CCCCCC; border-radius: 12px; color: var(--text);
+      font-weight: 800; font-size: 1.2rem; text-align: center; padding: 8px 0; outline: none; -moz-appearance: textfield;
+    }
+    .fila-salt input::-webkit-outer-spin-button, .fila-salt input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .fila-salt input:focus { border-color: var(--magenta); box-shadow: 0 0 0 3px rgba(229,0,91,.15); }
+    .ajuda-salt { color: var(--muted); font-size: 0.82rem; line-height: 1.35; margin: 0; }
+    .salt-text { display: block; color: var(--muted); font-size: 0.85rem; font-weight: 600; margin-top: 2px;
+                 white-space: pre-line; line-height: 1.35; }
     .una-tirada .salt-text { font-size: 0.95rem; margin-top: 8px; }
 
     /* Normes */
@@ -212,13 +219,6 @@
     <div class="entrades una" id="in-tirada" hidden>
       <div class="entrada"><label for="n">Compassos</label><div class="camp" data-camp="n"></div></div>
     </div>
-    <div class="entrades una" id="in-salt">
-      <div class="entrada">
-        <label for="salt">Salt <span class="opcional">(opcional)</span></label>
-        <div class="camp" data-camp="salt"></div>
-        <p class="ajuda-salt">El compàs on comença el fort d'abaix. Als programes és el número de després de la barra (33 - 77 / <b>56</b>). Si el poses, et diem a quin número cau el canvi útil comptant des del salt.</p>
-      </div>
-    </div>
 
     <details id="opcions">
       <summary>Més opcions <span class="resum" id="resum"></span><span class="fletxa">▾</span></summary>
@@ -232,6 +232,13 @@
         <div id="op-tirada" hidden>
           <div class="seccio">Tirada</div><div class="seg" id="tipus"></div>
           <div id="op-peu"><div class="seccio">Peu d'inici</div><div class="seg" id="peu"></div></div>
+        </div>
+        <div id="in-salt">
+          <div class="seccio"><label for="salt">Salt <span class="opcional">(opcional)</span></label></div>
+          <div class="fila-salt">
+            <input id="salt" type="number" inputmode="numeric" min="0" placeholder="—">
+            <p class="ajuda-salt">On comença el fort d'abaix: als programes, el número de després de la barra (33 - 77 / <b>56</b>).</p>
+          </div>
         </div>
       </div>
     </details>
